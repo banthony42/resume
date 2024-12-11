@@ -4,7 +4,7 @@
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
 % Define which language to use
-\usepackage[en]{optional}
+\usepackage[fr]{optional}
 
 % Languages settings
 \opt{en}{\usepackage[english]{babel}}
@@ -60,11 +60,6 @@
     \cvInterestsProfessional
     \cvInterest{\faPen}{\en{Industrial drawing (Solidworks)}\fr{Dessin Industriel (Solidworks)}}
   \end{cvInterests}
-
-  \begin{cvProjects}
-    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute of Dofus}}{\en{Multiplayer RPG written in Rust.}\fr{RPG multijoueur écrit en Rust.}}
-    \cvProject[link=https://github.com/banthony42/xv]{\texttt{XV}}{\en{Industrial tasks viewer/editor.}\fr{Visualisation et création de tâches industriels.}}
-  \end{cvProjects}
 \end{cvSidebar}
 
 \begin{cvMainContent}
@@ -72,27 +67,42 @@
   \begin{cvExperience}
     \cvItem{
       \en{Software engineer}
-      \fr{Ingénieur logiciel}
+      \fr{Ingénieur logiciel sur un Système de Détection d'Intrusion réseau.}
       \\
       \textsc{\selectfont P1 Security}, Paris. \en{since January}\fr{depuis Janvier} 2020\\
-      Integer tincidunt dapibus consectetur. Nullam tristique aliquam luctus. Sed ut ante velit. Nulla pharetra maximus lacus at elementum. Suspendisse sodales consectetur metus, sit amet ultricies ipsum ultrices ut.};
+      \en{\textbf{TODO}}
+      \fr{Au sein de l'équipe de développement d'un IDS pour les réseaux Telecom, sur le traffic de signalisation. J'ai eu l'occasion de développer, maintenir et tester toute les couches du logiciel, ou encore résoudre de la dettes technique. Voici un apercu non exaustif de ce sur quoi j'ai pu travailler:
+        \paragraph{\textnormal{\textit{Backend}}}: C, Python, Lua, Bash\\
+        Rework et amélioration d'un client API REST configurable pour affiner les alertes détectées.
+        \paragraph{\textnormal{\textit{Frontend}}}: Django, JS, Kibana\\
+        Ajout de la prise en charge d'OpenIDConnect.\\
+        \paragraph{\textnormal{\textit{Base de données}}}: Redis, Elasticsearch}\\
+      Migration automatique de la base de donnée Elastic et résolutions du changements de format de données, sans pertes.\\
+      \paragraph{\textnormal{\textit{Tests d'intégration continue}}}: Jenkins\\
+      Devops sur une CI Jenkins composé d'un noeud master et de cinq noeuds slave.
+      Maitenance et développement: pipeline de test, tests unitaire, fonctionnels et de bout en bout.
+    }
     \cvItem{
-      \en{SDK / API software developer for a robot. C\# - Unity}
-      \fr{Développeur logiciel SDK / API pour robot. C\# - Unity}
+      \en{SDK software developer for a robot. C\# - Unity}
+      \fr{Développeur logiciel SDK pour robot. C\# - Unity}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{October}\fr{Octobre} 2019 -- \en{May}\fr{Mai} 2019\\
-      Integer tincidunt dapibus consectetur. Nullam tristique aliquam luctus. Sed ut ante velit. Nulla pharetra maximus lacus at elementum. Suspendisse sodales consectetur metus, sit amet ultricies ipsum ultrices ut.};
+      \fr{Intégration et rework de brique technologique.\\Développement de nouvelles fonctionnalités.\\Maintenance et debug du code existant.\\Revue de code et méthode agile.}
+      \en{\textbf{TODO}}
+    }
     \cvItem{
       \en{Applications development for a robot. C\# - Unity}
       \fr{Développement d'applications pour robot. C\# - Unity}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{March}\fr{Mars} 2019 -- \en{September}\fr{Septembre} 2018\\
-      Integer tincidunt dapibus consectetur. Nullam tristique aliquam luctus. Sed ut ante velit. Nulla pharetra maximus lacus at elementum. Suspendisse sodales consectetur metus, sit amet ultricies ipsum ultrices ut.};
+      \en{\textbf{TODO}}
+      \fr{Développement d'applications pour le robot Buddy en s'appuyant sur le SDK interne (C\#/Unity). Maintenance et ajout de nouvelles fonctionnalités aux applications existante. Revue de code et méthode agile.}
+    }
     \cvItem{
       \en{Embedded development and mecanic, electronic conception}
       \fr{Développement embarqué, conception mécanique et électronique}\\
       \textsc{Mainbot}, Paris. \en{April}\fr{Avril} 2017 -- \en{November}\fr{Novembre} 2016\\
-      \en{}
+      \en{\textbf{TODO}}
       \fr{Développement du premier prototype du robot Winky:\\Conception mécanique sous Solidworks pour impression 3D.\\Conception de circuits imprimés sous Kicad.\\Programmation sur Arduino et Raspberry Pi. (C/C++)}}
     \cvItem{
       \en{Industrial designer}
@@ -102,29 +112,40 @@
       \fr{Conception de machines de manutention suivant cahier des charges. Création de modèles 3D et plans de fabrication sur Solidworks.\\Suivi de fabrication et du montage des pièces.}};
   \end{cvExperience}
 
-  \begin{cvSkills}
-    \cvSkillTwo{4}{C}{4}{Linux}
-    \cvSkillTwo{4}{Lua}{4}{Elasticsearch}
-    \cvSkillTwo{4}{Bash}{4}{Kibana}
-    \cvSkillTwo{3}{Python - Django}{4}{Redis}
-    \cvSkillTwo{2}{HTML/CSS}{2}{Javascript}
-    \cvSkillTwo{2}{C\#}{2}{C++}
-    \cvSkillOne{2}{Rust - \en{\textbf{Active learning}}\fr{\textbf{Apprentissage actif}}}
-  \end{cvSkills}
-
 \end{cvMainContent}
 
 \newpage
+
+\begin{cvSidebar}
+  \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
+
+  \begin{cvProjects}
+    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute of Dofus}}{\en{Multiplayer RPG written in Rust.}\fr{RPG multijoueur écrit en Rust.}}
+    \cvProject[link=https://github.com/banthony42/xv]{\texttt{XV}}{\en{Industrial tasks viewer/editor.}\fr{Visualisation et création de tâches industriels.}}
+  \end{cvProjects}
+\end{cvSidebar}
 
 \begin{cvMainContent}
 
   \begin{cvEducation}
     \cvItem{
+      \en{Rust Learning}
+      \fr{Apprentissage du language Rust}\\
+      \en{Autodidact}\fr{Autodidacte}, \en{\textbf{since} February}\fr{\textbf{depuis} Février} 2024\\
+    }
+    \cvItem{
       \en{Numeric architect diploma}
       \fr{Diplôme d'architecte du numérique}\\
       \en{42 school.}\fr{Ecole 42.} \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020\\
-      \en{Learning through projects implementation, peer code review, and reading documentations. Intensive C practice then object-oriented programming with C++ and C\#. Some projects:\\C: malloc, nm , otool, client-server ftp, basic Wolfenstein 3D game\\C++: Dynamic graphic library switch at runtime around snake game\\C\#: XV (Industrial tasks viewer / editor)}
-      \fr{Apprentissage du développement informatique par réalisation de projets, revue de code par les pairs et lecture de documentations. Pratique du C intensive puis de la programmation orientée objet avec le C++ et le C\#. Quelque projets réalisé:\\C: malloc, nm, otool, client-serveur ftp, Wolfenstein 3D basique\\C++: Chargement de lib dynamique au runtime autour d'un snake\\C\#: XV (Visualisation et création de tâches industriels)}}
+      \en{Learning through projects implementation, peer code review, and reading documentations. Intensive C practice then object-oriented programming with C++ and C\#. Some projects: (not exhaustive list)\\C: malloc, nm , otool, client-server ftp, basic Wolfenstein 3D game\\C++: Dynamic graphic library switch at runtime around snake game\\C\#: XV (Industrial tasks viewer / editor)}
+      \fr{Apprentissage du développement informatique par réalisation de projets, revue de code par les pairs et lecture de documentations. Pratique du C intensive puis de la programmation orientée objet avec le C++ et le C\#.
+        Quelque projets réalisé: (non exhaustif)\\
+        \paragraph{\textnormal{\textit{Projets en C}}}:\\
+        malloc, nm, otool, client-serveur ftp, Wolfenstein 3D basique\\
+        \paragraph{\textnormal{\textit{Nibbler}}}: (C++)\\
+        Chargement de lib dynamique au runtime autour d'un snake\\
+        \paragraph{\textnormal{\textit{XV}}}: (C\# - Unity)\\
+        Visualisation et création de tâches industriels}}
     \cvItem{
       \en{Bachelor of Science in informatic conception engineering}
       \fr{License Professionnelle Ingénierie de la Conception Informatisée}\\
@@ -143,41 +164,38 @@
     \cvSkillTwo{4}{C}{4}{Linux}
     \cvSkillTwo{4}{Lua}{4}{Elasticsearch}
     \cvSkillTwo{4}{Bash}{4}{Kibana}
-    \cvSkillTwo{3}{Python - Django}{4}{Redis}
+    \cvSkillTwo{3}{Python \& Django}{4}{Redis}
     \cvSkillTwo{2}{HTML/CSS}{2}{Javascript}
-    \cvSkillTwo{2}{C\#}{2}{C++}
-    \cvSkillOne{2}{Rust - \en{\textbf{Active learning}}\fr{\textbf{Apprentissage actif}}}
+    \cvSkillTwo{2}{VirtualBox}{2}{VMWare}
+    \cvSkillTwo{2}{C\#}{1}{C++}
+    \cvSkillTwo{2}{Rust - \en{\textbf{Active learning}}\fr{\textbf{Apprentissage actif}}}{1}{Docker}
   \end{cvSkills}
 
 \end{cvMainContent}
 
-\begin{cvSidebar}
+% \clearpage
 
-\end{cvSidebar}
+% \begin{cvCoverLetter}
 
-\clearpage
+%   \cvBeneficiary{%
+%     name=Jane Smith,
+%     position=Position,
+%     company=Company,
+%     address line 1=Address line 1,
+%     address line 2=Address line 2}
 
-\begin{cvCoverLetter}
+%   Dear Miss.\ Smith
 
-  \cvBeneficiary{%
-    name=Jane Smith,
-    position=Position,
-    company=Company,
-    address line 1=Address line 1,
-    address line 2=Address line 2}
+%   \vspace{\baselineskip}
 
-  Dear Miss.\ Smith
+%   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
+%   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
+%   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
 
-  \vspace{\baselineskip}
+%   \vspace{\cvMargin}
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
+%   \cvFullName
 
-  \vspace{\cvMargin}
-
-  \cvFullName
-
-\end{cvCoverLetter}
+% \end{cvCoverLetter}
 
 \end{document}
