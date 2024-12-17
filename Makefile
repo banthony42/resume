@@ -15,10 +15,11 @@ clean-latex:
 		echo "Delete $$LANGUAGE compiled files ..."; \
 		$(LATEXMK) -silent -c -jobname=$(CV_PREFIX)_$$LANGUAGE; \
 	done
+	@rm -f *.aux *.fdb_latexmk *.fls *.log *.out *.synctex.gz *.xdv
 
 clean: clean-latex
 	@for LANGUAGE in $(LANGUAGES); do \
 		echo "Delete $$LANGUAGE pdf and compile files ..."; \
 		$(LATEXMK) -silent -C -jobname=$(CV_PREFIX)_$$LANGUAGE; \
 	done
-
+	@rm -f cv.pdf
