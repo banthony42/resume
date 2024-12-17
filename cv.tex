@@ -72,12 +72,14 @@
       \textsc{\selectfont P1 Security}, Paris. \en{since January}\fr{depuis Janvier} 2020\\
       \en{\textbf{TODO}}
       \fr{Au sein de l'équipe de développement d'un IDS pour les réseaux Telecom, sur le traffic de signalisation. J'ai eu l'occasion de développer, maintenir et tester toute les couches du logiciel, ou encore résoudre de la dettes technique. Voici un apercu non exaustif de ce sur quoi j'ai pu travailler:
-        \paragraph{\textnormal{\textit{Backend}}}: C, Python, Lua, Bash\\
-        Rework et amélioration d'un client API REST configurable pour affiner les alertes détectées.
-        \paragraph{\textnormal{\textit{Frontend}}}: Django, JS, Kibana\\
+        \paragraph{\textnormal{\textit{Backend}}}: C, Lua, Python, Django, Bash\\
+        Rework et amélioration d'un client API REST configurable pour affiner les alertes détectées.\\
+        Rework / ré-implémentation (bash -> python) d'un module de gestion d'un cluster Elasticsearch. (Mappings, Templates, Lifecycles)\\
         Ajout de la prise en charge d'OpenIDConnect.\\
+        \paragraph{\textnormal{\textit{Frontend}}}: CSS, JS, Kibana\\
+        Intégration de pages et vue Kibana dans l'interface web du logiciel.
         \paragraph{\textnormal{\textit{Base de données}}}: Redis, Elasticsearch}\\
-      Migration automatique de la base de donnée Elastic et résolutions du changements de format de données, sans pertes.\\
+      Migration automatique de la base de donnée Elastic suite à la mise à jour d'Elasticsearch (5.6 -> 7.10). Résolutions des changements de format de données, sans pertes (10 à 40 millions de documents).\\
       \paragraph{\textnormal{\textit{Tests d'intégration continue}}}: Jenkins\\
       Devops sur une CI Jenkins composé d'un noeud master et de cinq noeuds slave.
       Maitenance et développement: pipeline de test, tests unitaire, fonctionnels et de bout en bout.
@@ -120,8 +122,8 @@
   \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
 
   \begin{cvProjects}
-    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute of Dofus}}{\en{Multiplayer RPG written in Rust.}\fr{RPG multijoueur écrit en Rust.}}
-    \cvProject[link=https://github.com/banthony42/xv]{\texttt{XV}}{\en{Industrial tasks viewer/editor.}\fr{Visualisation et création de tâches industriels.}}
+    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute of Dofus}}{\en{Multiplayer RPG written in Rust.\\Status: In progress\\Initiative: personal}\fr{RPG multijoueur écrit en Rust.\\Status: En cours\\Initiative: personnel}}
+    \cvProject[link=https://github.com/banthony42/xv]{\texttt{XV}}{\en{Industrial tasks viewer/editor.\\Status: Finished\\Initiative: 42 school\\}\fr{Visualisation et création de tâches industriels.\\Status: Terminé\\Initiative: Ecole 42}}
   \end{cvProjects}
 \end{cvSidebar}
 
@@ -139,13 +141,13 @@
       \en{42 school.}\fr{Ecole 42.} \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020\\
       \en{Learning through projects implementation, peer code review, and reading documentations. Intensive C practice then object-oriented programming with C++ and C\#. Some projects: (not exhaustive list)\\C: malloc, nm , otool, client-server ftp, basic Wolfenstein 3D game\\C++: Dynamic graphic library switch at runtime around snake game\\C\#: XV (Industrial tasks viewer / editor)}
       \fr{Apprentissage du développement informatique par réalisation de projets, revue de code par les pairs et lecture de documentations. Pratique du C intensive puis de la programmation orientée objet avec le C++ et le C\#.
-        Quelque projets réalisé: (non exhaustif)\\
+        Quelque projets réalisé: (Liste non exhaustive)\\
         \paragraph{\textnormal{\textit{Projets en C}}}:\\
         malloc, nm, otool, client-serveur ftp, Wolfenstein 3D basique\\
         \paragraph{\textnormal{\textit{Nibbler}}}: (C++)\\
         Chargement de lib dynamique au runtime autour d'un snake\\
         \paragraph{\textnormal{\textit{XV}}}: (C\# - Unity)\\
-        Visualisation et création de tâches industriels}}
+        Visualisation et création de tâches industriels.\\Animation d'éléments entre eux, implémentation d'une timeline, d'un gestionnaire de fichier pour enregistrer la simulation ou en charger une existante, import d'objet 3D.}}
     \cvItem{
       \en{Bachelor of Science in informatic conception engineering}
       \fr{License Professionnelle Ingénierie de la Conception Informatisée}\\
