@@ -4,7 +4,7 @@
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
 % Define which language to use
-\usepackage[fr]{optional}
+\usepackage[en]{optional}
 
 % Languages settings
 \opt{en}{\usepackage[english]{babel}}
@@ -70,41 +70,56 @@
       \fr{Ingénieur logiciel sur un Système de Détection d'Intrusion réseau.}
       \\
       \textsc{\selectfont P1 Security}, Paris. \en{since January}\fr{depuis Janvier} 2020\\
-      \en{\textbf{TODO}}
+      \en{Within Network Intrusion Detection System development team, for Telecom signaling traffic. I had the opportunity to develop, maintain and test all the staks of the software, or to resolve technical debt. Here is an non-exhaustive overview of the tasks i have made:
+        \paragraph{\textnormal{\textit{Backend}}}: C, Lua, Python, Django, Bash\\
+        Rework and improvement of the configurable API REST client\\
+        (Lua/Coroutines/Redis)\\
+        Improvement of the packet history system (C/Lua)\\
+        Rewrite and improvement of the Elasticsearch cluster manager\\
+        (Mappings, Templates, Lifecycles, bash -> python)\\
+        Added support for OpenIDConnect\\
+        \paragraph{\textnormal{\textit{Frontend}}}: CSS, JS, Kibana\\
+        Integration of Kibana pages and views into the software's web interface.
+        \paragraph{\textnormal{\textit{Database}}}: Redis, Elasticsearch\\
+        Production ready tool, to handle automatic database migration after Elasticsearch upgrade. (5.6 -> 7.10) Resolutions of data format changes, without losses (10 to 40 million documents).\\
+        \paragraph{\textnormal{\textit{Continuous integration}}}: Jenkins\\
+        Devops on a Jenkins CI composed of a master node and five slave nodes.
+        Maintenance and development: test pipeline, unit tests, functional / end-to-end tests.
+      }
       \fr{Au sein de l'équipe de développement d'un IDS pour les réseaux Telecom, sur le traffic de signalisation. J'ai eu l'occasion de développer, maintenir et tester toute les couches du logiciel, ou encore résoudre de la dettes technique. Voici un apercu non exaustif de ce sur quoi j'ai pu travailler:
         \paragraph{\textnormal{\textit{Backend}}}: C, Lua, Python, Django, Bash\\
-        Rework et amélioration d'un client API REST configurable pour affiner les alertes détectées.\\
+        Rework et amélioration d'un client API REST configurable (Lua/Coroutines/Redis)\\
         Rework / ré-implémentation (bash -> python) d'un module de gestion d'un cluster Elasticsearch. (Mappings, Templates, Lifecycles)\\
         Ajout de la prise en charge d'OpenIDConnect.\\
         \paragraph{\textnormal{\textit{Frontend}}}: CSS, JS, Kibana\\
         Intégration de pages et vue Kibana dans l'interface web du logiciel.
-        \paragraph{\textnormal{\textit{Base de données}}}: Redis, Elasticsearch}\\
-      Migration automatique de la base de donnée Elastic suite à la mise à jour d'Elasticsearch (5.6 -> 7.10). Résolutions des changements de format de données, sans pertes (10 à 40 millions de documents).\\
-      \paragraph{\textnormal{\textit{Tests d'intégration continue}}}: Jenkins\\
-      Devops sur une CI Jenkins composé d'un noeud master et de cinq noeuds slave.
-      Maitenance et développement: pipeline de test, tests unitaire, fonctionnels et de bout en bout.
+        \paragraph{\textnormal{\textit{Base de données}}}: Redis, Elasticsearch\\
+        Outil de migration automatique de la base de donnée, en production, suite à la mise à jour d'Elasticsearch (5.6 -> 7.10). Résolutions des changements de format de données, sans pertes (10 à 40 millions de documents).\\
+        \paragraph{\textnormal{\textit{Tests d'intégration continue}}}: Jenkins\\
+        Devops sur une CI Jenkins composé d'un noeud master et de cinq noeuds slave.
+        Maitenance et développement: pipeline de test, tests unitaire, fonctionnels et de bout en bout.}
     }
     \cvItem{
       \en{SDK software developer for a robot. C\# - Unity}
       \fr{Développeur logiciel SDK pour robot. C\# - Unity}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{October}\fr{Octobre} 2019 -- \en{May}\fr{Mai} 2019\\
-      \fr{Intégration et rework de brique technologique.\\Développement de nouvelles fonctionnalités.\\Maintenance et debug du code existant.\\Revue de code et méthode agile.}
-      \en{\textbf{TODO}}
+      \fr{Développement de nouvelles fonctionnalitées avec une attention particulière pour fournir une interface de qualité pour les utilisateurs du SDK.\\Maintenance et debug du code existant.\\Revue de code et méthode agile.}
+      \en{New feature development for the robot, keeping in mind to supply good public interface for the SDK users.\\Maintenance of the existing code base.\\Code review and agile method.}
     }
     \cvItem{
       \en{Applications development for a robot. C\# - Unity}
       \fr{Développement d'applications pour robot. C\# - Unity}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{March}\fr{Mars} 2019 -- \en{September}\fr{Septembre} 2018\\
-      \en{\textbf{TODO}}
+      \en{Application development for robot (Buddy), using internal SDK (C\#/Unity). Maintenance and implementation of new feature to existing apps. Code review and agile method.}
       \fr{Développement d'applications pour le robot Buddy en s'appuyant sur le SDK interne (C\#/Unity). Maintenance et ajout de nouvelles fonctionnalités aux applications existante. Revue de code et méthode agile.}
     }
     \cvItem{
-      \en{Embedded development and mecanic, electronic conception}
+      \en{Embedded development and mechanic, electronic conception}
       \fr{Développement embarqué, conception mécanique et électronique}\\
       \textsc{Mainbot}, Paris. \en{April}\fr{Avril} 2017 -- \en{November}\fr{Novembre} 2016\\
-      \en{\textbf{TODO}}
+      \en{Winky robot first prototype development:\\Mechanical conception for 3D printing, using Solidworks.\\Printed circuit board conception using Kicad.\\Development on Arduino and Raspberry Pi. (C/C++)}
       \fr{Développement du premier prototype du robot Winky:\\Conception mécanique sous Solidworks pour impression 3D.\\Conception de circuits imprimés sous Kicad.\\Programmation sur Arduino et Raspberry Pi. (C/C++)}}
     \cvItem{
       \en{Industrial designer}
@@ -139,7 +154,14 @@
       \en{Numeric architect diploma}
       \fr{Diplôme d'architecte du numérique}\\
       \en{42 school.}\fr{Ecole 42.} \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020\\
-      \en{Learning through projects implementation, peer code review, and reading documentations. Intensive C practice then object-oriented programming with C++ and C\#. Some projects: (not exhaustive list)\\C: malloc, nm , otool, client-server ftp, basic Wolfenstein 3D game\\C++: Dynamic graphic library switch at runtime around snake game\\C\#: XV (Industrial tasks viewer / editor)}
+      \en{Learning through projects implementation, peer code review, and reading documentations. Intensive C practice then object-oriented programming with C++ and C\#.
+        Some projects: (non-exhaustive list)\\
+        \paragraph{\textnormal{\textit{C projects}}}:\\
+        malloc, nm, otool, client-\en{server}\fr{serveur} ftp, Wolfenstein 3D \en{basic}\fr{basique}\\
+        \paragraph{\textnormal{\textit{Nibbler}}}: (C++)\\
+        Dynamic graphic library switch at runtime around snake game\\
+        \paragraph{\textnormal{\textit{XV}}}: (C\# - Unity)\\
+        Industrial tasks editor and viewer.\\Element animations, timeline implementation to handle the whole tasks and animations, file manager to save the tasks simulation or to load an existing one, 3D object import at runtime.}
       \fr{Apprentissage du développement informatique par réalisation de projets, revue de code par les pairs et lecture de documentations. Pratique du C intensive puis de la programmation orientée objet avec le C++ et le C\#.
         Quelque projets réalisé: (Liste non exhaustive)\\
         \paragraph{\textnormal{\textit{Projets en C}}}:\\
