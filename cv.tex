@@ -1,10 +1,12 @@
 \documentclass[a4paper]{limecv}
 
+\usepackage{enumitem}
+
 % Defaults used in template design.
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
 % Define which language to use
-\usepackage[en]{optional}
+\usepackage[fr]{optional}
 
 % Languages settings
 \opt{en}{\usepackage[english]{babel}}
@@ -16,6 +18,26 @@
 % Syntactic sugar to write content specific to a language
 \newcommand{\en}[1]{\opt{en}{#1}}
 \newcommand{\fr}[1]{\opt{fr}{#1}}
+
+\newlist{myitems}{enumerate}{2}
+
+\setlist[myitems, 1]
+{label=\textbullet,
+topsep=2.5pt,
+parsep=1.5pt,
+leftmargin=8pt,
+rightmargin=0pt
+}
+
+\setlist[myitems, 2]
+{label=\textbullet,
+topsep=0pt,
+parsep=1.5pt,
+leftmargin=15pt,
+rightmargin=15pt}
+
+
+\newcommand{\enum}[1]{\begin{myitems}{#1}\end{myitems}}
 
 % Overwrite default package color
 % Sadly this is the only way to change color
@@ -44,8 +66,8 @@
   \end{cvContact}
 
   \begin{cvLanguages}
-    \cvLanguage{\en{English}\fr{Anglais}}{3}
     \cvLanguage{\en{French (native)}\fr{Français (natif)}}{5}
+    \cvLanguage{\en{English}\fr{Anglais}}{3}
   \end{cvLanguages}
 
   \begin{cvInterests}[short]
@@ -64,65 +86,125 @@
       \fr{\textbf{Ingénieur logiciel sur un Système de Détection d'Intrusion réseau.}}
       \\
       \textsc{\selectfont P1 Security}, Paris. \en{since January}\fr{Depuis Janvier} 2020\\
-      \en{Within Network Intrusion Detection System development team, for Telecom signaling traffic. I had the opportunity to develop, maintain and test all the staks of the software, or to resolve technical debt. Here is an non-exhaustive overview of the tasks i have made:
-        \paragraph{\textnormal{\textit{Backend}}}: C, Lua, Python, Django, Bash\\
-        Rework and improvement of the asynchronous API REST client, keeping it highly configurable.\\
-        Improvement of the packet history system\\
-        Rewrite and improvement of the Elasticsearch cluster manager\\
-        (Mappings, Templates, Lifecycles)\\
-        Added support for OpenIDConnect\\
-        \paragraph{\textnormal{\textit{Frontend}}}: CSS, JS, Kibana\\
-        Integration of Kibana pages and views into the software's web interface.
-        \paragraph{\textnormal{\textit{Database}}}: Redis, Elasticsearch\\
-        Production ready tool, to handle automatic database migration after Elasticsearch upgrade. (5.6 -> 7.10) Resolutions of data format changes, without losses (10 to 40 million documents).\\
-        \paragraph{\textnormal{\textit{Continuous integration}}}: Jenkins\\
-        Devops on a Jenkins CI composed of a master node and five agents.
-        Maintenance and development: test pipeline, unit tests, functional / end-to-end tests.
+      \en{\enum{
+          \item Within Network Intrusion Detection System development team, for Telecom signaling traffic. I had the opportunity to develop, maintain and test all the staks of the software, or to resolve technical debt. Here is an non-exhaustive overview of the tasks i have made:
+          \item \textnormal{\textit{Backend}}: C, Lua, Python, Django, Bash
+          \begin {myitems}
+          \item Rework and improvement of the asynchronous API REST client, keeping it highly configurable.
+          \item Improvement of the packet history system
+          \item Rewrite and improvement of the Elasticsearch instance manager (Mappings, Templates, Lifecycles)
+          \item Added support for OpenIDConnect
+          \end {myitems}
+          \item \textnormal{\textit{Frontend}}: CSS, JS, Kibana
+          \begin {myitems}
+          \item Creation of Kibana visualizations and dashboards.
+          \item Kibana pages integrations into the software's web interface.
+          \end {myitems}
+          \item \textnormal{\textit{Database}}: Redis, Elasticsearch
+          \begin {myitems}
+          \item Production ready tool, to handle automatic database migration after Elasticsearch upgrade. (5.6 -> 7.10)
+          \item Resolutions of data format changes, without losses (10 to 40 million documents).
+          \end {myitems}
+          \item \textnormal{\textit{Continuous integration}}: Jenkins, Python, bash
+          \begin {myitems}
+          \item Devops on a Jenkins CI composed of a master node and five agents.
+          \item Maintenance and development: test pipeline, unit tests, functional / end-to-end tests.
+          \end {myitems}
+        }
       }
-      \fr{Au sein de l'équipe de développement d'un IDS pour les réseaux Telecom, sur le traffic de signalisation. J'ai eu l'occasion de développer, maintenir et tester toutes les couches du logiciel, ou encore résoudre de la dette technique. Voici un aperçu non exaustif de ce sur quoi j'ai pu travailler:
-        \paragraph{\textnormal{\textit{Backend}}}: C, Lua, Python, Django, Bash\\
-        Réécriture et amélioration d'un client API REST asynchrone, avec de fortes contraintes de configuration.\\
-        Amélioration du système d'historisation des paquets\\
-        Réécriture et amélioration d'un module de gestion d'un cluster Elasticsearch. (Mappings, Templates, Lifecycles)\\
-        Ajout de la prise en charge d'OpenIDConnect.\\
-        \paragraph{\textnormal{\textit{Frontend}}}: CSS, JS, Kibana\\
-        Intégration de pages et vue Kibana dans l'interface web du logiciel.
-        \paragraph{\textnormal{\textit{Base de données}}}: Redis, Elasticsearch\\
-        Outil de migration automatique de la base de données, en production, suite à la mise à jour d'Elasticsearch (5.6 -> 7.10). Résolutions des changements de format de données, sans pertes (10 à 40 millions de documents).\\
-        \paragraph{\textnormal{\textit{Tests d'intégration continue}}}: Jenkins\\
-        Devops sur une CI Jenkins composé d'un noeud master et de cinq agents.
-        Maintenance et développement: pipeline de tests, tests unitaires, fonctionnels et de bout en bout.}
+      \fr{\enum{
+          \item Au sein de l'équipe de développement d'un IDS pour les réseaux Telecom, sur le traffic de signalisation. J'ai eu l'occasion de développer, maintenir et tester toutes les couches du logiciel, ou encore résoudre de la dette technique. Voici un aperçu non exaustif de ce sur quoi j'ai pu travailler:
+          \item \textnormal{\textit{Backend}}: C, Lua, Python, Django, Bash\\
+          \begin {myitems}
+          \item Réécriture et amélioration d'un client API REST asynchrone, avec de fortes contraintes de configuration.
+          \item Amélioration du système d'historisation des paquets
+          \item Réécriture et amélioration d'un gestionnaire d'instance Elasticsearch. (Mappings, Templates, Lifecycles)
+          \item Ajout de la prise en charge d'OpenIDConnect.
+          \end {myitems}
+          \item \textnormal{\textit{Frontend}}: CSS, JS, Kibana\\
+          \begin {myitems}
+          \item Création de visualisations et dashboard dans Kibana.
+          \item Intégration de vues Kibana dans l'interface web du logiciel.
+          \end {myitems}
+          \item \textnormal{\textit{Base de données}}: Redis, Elasticsearch
+          \begin {myitems}
+          \item Outil de migration automatique de la base de données, en production, suite à la mise à jour d'Elasticsearch (5.6 -> 7.10).
+          \item Résolutions des changements de format de données, sans pertes (10 à 40 millions de documents).
+          \end {myitems}
+          \item \textnormal{\textit{Tests d'intégration continue}}: Jenkins, Python, Bash\\
+          \begin {myitems}
+          \item Devops sur une CI Jenkins composé d'un noeud master et de cinq agents.\\
+          \item Maintenance et développement: pipeline de tests, tests unitaires, fonctionnels et de bout en bout.
+          \end {myitems}
+        }}
     }
     \cvItem{
-      \en{\textbf{SDK software developer for a robot. C\# - Unity}}
-      \fr{\textbf{Développeur logiciel SDK pour robot. C\# - Unity}}
+      \en{\textbf{SDK software developer for a robot.}}
+      \fr{\textbf{Développeur logiciel SDK pour robot.}}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{May}\fr{Mai} 2019 -- \en{October}\fr{Octobre} 2019\\
-      \fr{Développement de nouvelles fonctionnalités avec une attention particulière pour fournir une interface de qualité pour les utilisateurs du SDK.\\Maintenance et debug du code existant.\\Revue de code et méthode agile.}
-      \en{New feature development for the robot, keeping in mind to supply good public interface for the SDK users.\\Maintenance of the existing code base.\\Code review and agile method.}
+      \en{\enum{
+          \item New feature development for the robot, keeping in mind to supply good public interface for the SDK users.
+          \item Maintenance of the existing code base.
+          \item Code review and agile method.
+        }}
+      \fr{\enum{
+          \item Développement de nouvelles fonctionnalités avec une attention particulière pour fournir une interface de qualité pour les utilisateurs du SDK.
+          \item Réécriture et maintenance du code existant.
+          \item Revue de code et méthode agile.
+        }}
     }
     \cvItem{
-      \en{\textbf{Applications development for a robot. C\# - Unity}}
-      \fr{\textbf{Développement d'applications pour robot. C\# - Unity}}
+      \en{\textbf{Robot application developer.}}
+      \fr{\textbf{Développeur d'applications pour robot.}}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{September}\fr{Septembre} 2018 -- \en{March}\fr{Mars} 2019\\
-      \en{Application development for robot (Buddy), using internal SDK (C\#/Unity). Maintenance and implementation of new feature to existing apps. Code review and agile method.}
-      \fr{Développement d'applications pour le robot Buddy en s'appuyant sur le SDK interne (C\#/Unity). Maintenance et ajout de nouvelles fonctionnalités aux applications existantes. Revue de code et méthode agile.}
+      \en{\enum{
+          \item Applications development using internal SDK (C\#/Unity).
+          \item Development of an app to easily run non-regression automated tests.
+          \item Rework and maintenance of existing apps.
+          \item Code review and agile method.
+        }}
+      \fr{\enum{
+          \item Développement d'applications basé sur le SDK interne (C\#/Unity).
+          \item Développement de tests automatisés de non régression.
+          \item Réécriture et maintenance des applications existantes.
+          \item Revue de code et méthode agile.
+        }}
     }
     \cvItem{
       \en{\textbf{Embedded development and mechanic, electronic conception}}
       \fr{\textbf{Développement embarqué, conception mécanique et électronique}}\\
-      \textsc{Mainbot}, Paris. \en{November}\fr{Novembre} 2016 -- \en{April}\fr{Avril} 2017\\
-      \en{Winky robot first prototype development:\\Mechanical conception for 3D printing, using Solidworks.\\Printed circuit board conception using Kicad.\\Development on Arduino and Raspberry Pi. (C/C++)}
-      \fr{Développement du premier prototype du robot Winky:\\Conception mécanique sous Solidworks pour impression 3D.\\Conception de circuits imprimés sous Kicad.\\Programmation sur Arduino et Raspberry Pi. (C/C++)}}
+      \textsc{Mainbot} Paris. \en{November}\fr{Novembre} 2016 -- \en{April}\fr{Avril} 2017\\
+      \en{\enum{
+          \item Winky robot first prototype development
+          \item Mechanical conception for 3D printing, using Solidworks.
+          \item Printed circuit board conception using Kicad.
+          \item Development on Arduino and Raspberry Pi. (C/C++)
+        }}
+      \fr{\enum{
+          \item Développement du premier prototype du robot Winky
+          \item Conception mécanique sous Solidworks pour impression 3D.
+          \item Conception de circuits imprimés sous Kicad.
+          \item Programmation sur Arduino et Raspberry Pi. (C/C++)
+        }
+      }}
+
     \cvItem{
       \en{\textbf{Industrial designer}}
       \fr{\textbf{Dessinateur-Projeteur industriel}}\\
-      \textsc{Boubiela Moret}, Saint-Quentin. \en{May}\fr{Mai} 2013 -- \en{November}\fr{Novembre} 2015\\
-      \en{Design of loading equipments according to specifications. Creation of 3D models and fabrication plans on Solidworks. Monitoring part manufacturing and machine assembly.}
-      \fr{Conception de machines de manutention suivant cahier des charges. Création de modèles 3D et plans de fabrication sur Solidworks.\\Suivi de fabrication et du montage des pièces.}};
+      \textsc{Boubiela Moret} Saint-Quentin. \en{May}\fr{Mai} 2013 -- \en{November}\fr{Novembre} 2015\\
+      \en{\enum{
+          \item Design of loading equipments according to specifications.
+          \item Creation of 3D models and fabrication plans on Solidworks.
+          \item Monitoring part manufacturing and machine assembly.
+        }}
+      \fr{\enum{
+          \item Conception de machines de manutention selon cahier des charges.
+          \item Création de modèles 3D et plans de fabrication sur Solidworks.
+          \item Suivi de fabrication et du montage des pièces.
+        }}};
   \end{cvExperience}
-
 \end{cvMainContent}
 
 \newpage
@@ -130,9 +212,45 @@
 \begin{cvSidebar}
   \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
 
+  \begin{cvContact}
+    \cvContactAddress{Valenciennes (59)}
+    \cvContactEmail{mailto:abara.pro24@gmail.com}{abara.pro24@gmail.com}
+    \cvContactPhone{+33 6 31 54 80 24}
+    \cvContactWebsite{https://github.com/banthony42}{github.com/banthony42}
+    \cvContactLinkedin{https://www.linkedin.com/in/anthony-bara-65b2a8125/}{anthonybara}
+  \end{cvContact}
+
+
+
   \begin{cvProjects}
-    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute of Dofus}}{\en{Multiplayer RPG written in Rust.\\Status: In progress\\Initiative: personal}\fr{RPG multijoueur écrit en Rust.\\Statut: En cours\\Initiative: personnel}}
-    \cvProject[link=https://github.com/banthony42/xv]{\texttt{XV}}{\en{Industrial tasks viewer/editor.\\Status: Finished\\Initiative: 42 school\\}\fr{Visualisation et création de tâches industrielles.\\Statut: Terminé\\Initiative: Ecole 42}}
+    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute of Dofus}}{
+      \en{\enum{
+          \color{white}
+          \item Multiplayer RPG written in Rust.
+          \item Status: In progress
+          \item Initiative: personal
+        }}
+      \fr{\enum{
+          \color{white}
+          \item RPG multijoueur écrit en Rust.
+          \item Statut: En cours
+          \item Initiative: personnel
+        }}
+    }
+    \cvProject[link=https://github.com/banthony42/xv]{\texttt{XV}}{
+      \en{\enum{
+          \color{white}
+          \item Animated industrial tasks viewer/editor.
+          \item Status: Finished
+          \item Initiative: 42 school
+        }}
+      \fr{\enum{
+          \color{white}
+          \item Visualisation et création de tâches industrielles animée.
+          \item Statut: Terminé
+          \item Initiative: Ecole 42
+        }}
+    }
   \end{cvProjects}
 \end{cvSidebar}
 
@@ -144,38 +262,64 @@
       \fr{\textbf{Apprentissage du language Rust}}\\
       \en{Autodidact}\fr{Autodidacte}. \en{Since February}\fr{Depuis Février} 2024\\
     }
+
     \cvItem{
       \en{\textbf{Numeric architect diploma}}
       \fr{\textbf{Diplôme d'architecte du numérique}}\\
-      \en{42 school.}\fr{Ecole 42.} \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020\\
-      \en{Learning through projects implementation, peer code review, and reading documentations. Intensive C practice then object-oriented programming with C++ and C\#.
-        Some projects: (non-exhaustive list)\\
-        \paragraph{\textnormal{\textit{C projects}}}:\\
-        malloc, nm, otool, client-\en{server}\fr{serveur} ftp, Wolfenstein 3D \en{basic}\fr{basique}\\
-        \paragraph{\textnormal{\textit{Nibbler}}}: (C++)\\
-        Dynamic graphic library switch at runtime around snake game\\
-        \paragraph{\textnormal{\textit{XV}}}: (C\# - Unity)\\
-        Industrial tasks editor and viewer.\\Element animations, timeline implementation to handle the whole tasks and animations, file manager to save the tasks simulation or to load an existing one, 3D object import at runtime.}
-      \fr{Apprentissage du développement informatique par réalisation de projets, revue de code par les pairs et lecture de documentation. Pratique intensive du C puis de la programmation orientée objet avec le C++ et le C\#.
-        Quelques projets réalisés: (Liste non exhaustive)\\
-        \paragraph{\textnormal{\textit{Projets en C}}}:\\
-        malloc, nm, otool, client-serveur ftp, Wolfenstein 3D basique\\
-        \paragraph{\textnormal{\textit{Nibbler}}}: (C++)\\
-        Chargement de lib dynamique au runtime autour d'un snake\\
-        \paragraph{\textnormal{\textit{XV}}}: (C\# - Unity)\\
-        Visualisation et création de tâches industrielles.\\Animation d'éléments entre eux, implémentation d'une timeline, d'un gestionnaire de fichier pour enregistrer la simulation ou en charger une existante, import d'objet 3D.}}
+      \en{42 school}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020\\
+      \en{
+        \enum{
+          \item Learning through projects implementation.
+          \item Peer code review, and reading documentations.
+          \item Intensive C practice rewriting well-known programm such as malloc, client-server ftp, basics of Wolfenstein 3D.\\
+          \item Then object-oriented programming :
+          \begin {myitems}
+          \item Nibbler, a snake game with dynamic graphic library switch at runtime (C++).
+          \item XV, an animated industrial tasks editor and viewer. Element animations, timeline implementation to handle the whole models animations, file manager to save the tasks simulation or to load an existing one, 3D object import at runtime (C\# - Unity).
+          \end {myitems}
+        }}
+      \fr {
+        \enum{
+          \item Apprentissage du développement informatique par réalisation de projets.
+          \item Revue de code par les pairs et lecture de documentation.
+          \item Pratique intensive du C par la réécriture de programme bien connu comme malloc, un client-serveur ftp, un Wolfenstein 3D basique.
+          \item Puis de la programmation orientée objet :
+          \begin {myitems}
+          \item Nibbler, un jeu snake avec chargement de lib dynamique au runtime (C++).
+          \item XV, permet de visualiser et créer des tâches industrielles animée. Animation d'éléments entre eux, implémentation d'une timeline, d'un gestionnaire de fichier pour enregistrer la simulation ou en charger une existante, import d'objet 3D au runtime (C\# - Unity).
+          \end {myitems}
+        }
+      }
+    }
+
     \cvItem{
       \en{\textbf{Bachelor of Science in informatic conception engineering}}
       \fr{\textbf{Licence Professionnelle Ingénierie de la Conception Informatisée}}\\
-      \en{September}\fr{Septembre} 2012 -- \en{May}\fr{Mai} 2013\\
-      \en{Mastery of CAD tools, mechanical engineering studies and industrial project management.}
-      \fr{Maîtrise des outils de dessin assisté par ordinateurs (DAO).\\Ingénierie mécanique et gestion de projets industriels.}}
+      UPJV Saint-Quentin. \en{September}\fr{Septembre} 2012 -- \en{May}\fr{Mai} 2013\\
+      \en{\enum{
+          \item Mastery of CAD tools.
+          \item Mechanical engineering studies and industrial project management.
+        }
+      }
+      \fr{\enum{
+          \item Maîtrise des outils de dessin assisté par ordinateurs (DAO).
+          \item Ingénierie mécanique et gestion de projets industriels.
+        }
+      }
+    }
+
     \cvItem{
       \en{\textbf{BTEC Industrial Mecanic and Automation}}
       \fr{\textbf{BTS Mécanique Automatisme Industriel}}\\
-      \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012\\
-      \en{Conception and maintenance of industrial machines and autmated systems.}
-      \fr{Conception et maintenance de systèmes automatisés industriels.}}
+      \en{High school}\fr{Lycée} Condorcet Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012\\
+      \en{\enum{
+          \item Conception and maintenance of industrial machines and automated systems.
+        }
+      }
+      \fr{\enum{
+          \item Conception et maintenance de systèmes automatisés industriels.
+        }
+      }}
   \end{cvEducation}
 
   \begin{cvSkills}
