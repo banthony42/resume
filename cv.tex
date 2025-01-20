@@ -6,7 +6,7 @@
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
 % Define which language to use
-\usepackage[fr]{optional}
+\usepackage[en]{optional}
 
 % Languages settings
 \opt{en}{\usepackage[english]{babel}}
@@ -128,7 +128,7 @@ rightmargin=15pt}
           \end {myitems}
           \item \textnormal{\textit{Base de données}}: Redis, Elasticsearch
           \begin {myitems}
-          \item Outil de migration automatique de la base de données, en production, suite à la mise à jour d'Elasticsearch (5.6 -> 7.10).
+          \item Outil de migration automatique de la base de données, en production, suite à la mise à jour d'Elasticsearch\\(5.6 -> 7.10).
           \item Résolutions des changements de format de données, sans pertes (10 à 40 millions de documents).
           \end {myitems}
           \item \textnormal{\textit{Tests d'intégration continue}}: Jenkins, Python, Bash\\
@@ -144,12 +144,12 @@ rightmargin=15pt}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{May}\fr{Mai} 2019 -- \en{October}\fr{Octobre} 2019\\
       \en{\enum{
-          \item New feature development for the robot, keeping in mind to supply good public interface for the SDK users.
+          \item New feature development for the robot, keeping in mind to supply good public interface for the SDK users (C\#/Unity).
           \item Maintenance of the existing code base.
           \item Code review and agile method.
         }}
       \fr{\enum{
-          \item Développement de nouvelles fonctionnalités avec une attention particulière pour fournir une interface de qualité pour les utilisateurs du SDK.
+          \item Développement de nouvelles fonctionnalités avec une attention particulière pour fournir une interface de qualité pour les utilisateurs du SDK (C\#/Unity).
           \item Réécriture et maintenance du code existant.
           \item Revue de code et méthode agile.
         }}
@@ -223,16 +223,16 @@ rightmargin=15pt}
 
 
   \begin{cvProjects}
-    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute of Dofus}}{
+    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute to Dofus}}{
       \en{\enum{
           \color{white}
-          \item Multiplayer RPG written in Rust.
+          \item Enjoy learning Rust trying to develop a connected RPG.
           \item Status: In progress
           \item Initiative: personal
         }}
       \fr{\enum{
           \color{white}
-          \item RPG multijoueur écrit en Rust.
+          \item S'amuser à apprendre Rust en développant un RPG connecté.
           \item Statut: En cours
           \item Initiative: personnel
         }}
@@ -261,6 +261,36 @@ rightmargin=15pt}
       \en{\textbf{Rust Learning}}
       \fr{\textbf{Apprentissage du language Rust}}\\
       \en{Autodidact}\fr{Autodidacte}. \en{Since February}\fr{Depuis Février} 2024\\
+      \en {\enum {
+          \item Start learning by reading documentation (Rust Book).
+          \item Then practice with exercices, data import with JSON and basic client-server chat implementation.
+          \item Creation of Tribute to Dofus, the early days of a connected RPG project:
+          \begin {myitems}
+          \item The only ambition is to learn Rust and enjoy trying to develop a connected RPG.
+          \item Graphic client using 'piston' crate.
+          \item Client-server communicate using GRPC with 'tonic'.
+          \item Server-database communicate using an ORM, with 'diesel'.
+          \item Asynchronous tasks for requests, using 'tokyo'.
+          \item CLI tool to manage players accounts, using 'clap'.
+          \item Tilemaps are imported as JSON to practice with 'serde'.
+          \item Game maps drawn in pixel art using Aseprite.
+          \end {myitems}
+        }}
+      \fr{\enum{
+          \item Début d'apprentissage par lecture de documentations (Rust Book).
+          \item Mise en pratique avec des excercices simple, import de données au format JSON, implementation d'un chat basique (client-serveur).
+          \item Création de Tribute to Dofus, les balbutiments d'un RPG connecté:
+          \begin {myitems}
+          \item La seule ambition est d'apprendre le Rust, tout en prenant plaisir à coder un RPG connecté.
+          \item Client graphique basé sur le crate 'piston'.
+          \item Client et serveur communiquent en GRPC, avec 'tonic'.
+          \item Serveur et base de données communiquent au moyen d'un ORM, avec 'diesel'.
+          \item Tâches asynchrone pour les requêtes avec 'tokyo'.
+          \item Outil CLI pour gérer les comptes de joueurs avec 'clap'.
+          \item Import des tilemaps au format JSON pour pratiquer avec 'serde'.
+          \item Cartes du jeu dessinées en pixel art avec Aseprite.
+          \end {myitems}
+        }}
     }
 
     \cvItem{
@@ -327,8 +357,8 @@ rightmargin=15pt}
     \cvSkillTwo{4}{Lua}{4}{Elasticsearch}
     \cvSkillTwo{4}{Bash}{4}{Kibana}
     \cvSkillTwo{3}{Python \& Django}{4}{Redis}
+    \cvSkillTwo{3}{VirtualBox / Vagrant}{2}{VMWare/ESXi}
     \cvSkillTwo{2}{HTML/CSS}{2}{Javascript}
-    \cvSkillTwo{2}{VirtualBox}{2}{VMWare}
     \cvSkillTwo{2}{C\#}{1}{C++}
     \cvSkillTwo{2}{Rust - \en{\textbf{Active learning}}\fr{\textbf{Apprentissage actif}}}{1}{Docker}
   \end{cvSkills}
