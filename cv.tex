@@ -1,12 +1,14 @@
 \documentclass[a4paper]{limecv}
 
 \usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
 
 % Defaults used in template design.
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
 % Define which language to use
-\usepackage[fr]{optional}
+\usepackage[en]{optional}
 
 % Languages settings
 \opt{en}{\usepackage[english]{babel}}
@@ -41,10 +43,26 @@ rightmargin=15pt}
 
 % Overwrite default package color
 % Sadly this is the only way to change color
-\definecolor{cvGreen}{HTML}{121824}         % Sidebar separators
-\definecolor{cvGreenLight}{HTML}{2e3c61}    % Sidebar background
-\definecolor{cvAccent}{HTML}{ffffff}        % Sidebar font
-\definecolor{cvDark}{HTML}{26334d}          % Main titles, separators and dots
+\definecolor{cvGreen}{HTML}{26334d}         % Sidebar separators
+\definecolor{cvGreenLight}{HTML}{314972}    % Sidebar background
+\definecolor{cvAccent}{HTML}{FFFFFF}        % Sidebar font
+\definecolor{cvDark}{HTML}{071952}          % Main titles, separators and dots
+\definecolor{cvBackground}{HTML}{FFFFFF}    % Main background
+
+% Custom colors created for this document
+\definecolor{mainFontColor}{HTML}{071952}
+\newcommand{\SideBarLinkColor}[1]{\color{cyan}#1\color{white}}
+\newcommand{\MainLinkColor}[1]{\color{cyan}#1\color{mainFontColor}}
+
+\newcommand{\cvContactSideBar}{
+  \begin{cvContact}
+    \cvContactAddress{Valenciennes (59)}
+    \cvContactEmail{mailto:abara.pro24@gmail.com}{\SideBarLinkColor{abara.pro24@gmail.com}}
+    \cvContactPhone{+33 6 31 54 80 24}
+    \cvContactWebsite{https://github.com/banthony42}{\SideBarLinkColor{github.com/banthony42}}
+    \cvContactLinkedin{https://www.linkedin.com/in/anthony-bara-65b2a8125/}{\SideBarLinkColor{anthonybara}}
+  \end{cvContact}
+}
 
 \begin{document}
 
@@ -57,13 +75,7 @@ rightmargin=15pt}
     \fr{Des Grafcets sur de vieux automates industriels, à OpenClassRoom en passant par l'école 42.\\Le chemin pour devenir développeur fut passionnant et chaque nouvelle route que j'emprunte à présent l'est plus encore. Passionné de programmation et curieux d'apprendre.\\Mes récentes années professionnelles m'ont enseignées que ma principale force est ma tenacité.}
   \end{cvProfile}
 
-  \begin{cvContact}
-    \cvContactAddress{Valenciennes (59)}
-    \cvContactEmail{mailto:abara.pro24@gmail.com}{abara.pro24@gmail.com}
-    \cvContactPhone{+33 6 31 54 80 24}
-    \cvContactWebsite{https://github.com/banthony42}{github.com/banthony42}
-    \cvContactLinkedin{https://www.linkedin.com/in/anthony-bara-65b2a8125/}{anthonybara}
-  \end{cvContact}
+  \cvContactSideBar
 
   \begin{cvLanguages}
     \cvLanguage{\en{French (native)}\fr{Français (natif)}}{5}
@@ -82,6 +94,7 @@ rightmargin=15pt}
 
   \begin{cvExperience}
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{Software engineer}}
       \fr{\textbf{Ingénieur logiciel sur un Système de Détection d'Intrusion réseau.}}
       \\
@@ -143,6 +156,7 @@ rightmargin=15pt}
         }}
     }
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{SDK software developer for a robot.}}
       \fr{\textbf{Développeur logiciel SDK pour robot.}}
       \\
@@ -159,6 +173,7 @@ rightmargin=15pt}
         }}
     }
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{Robot application developer.}}
       \fr{\textbf{Développeur d'applications pour robot.}}
       \\
@@ -177,6 +192,7 @@ rightmargin=15pt}
         }}
     }
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{Embedded development and mechanic, electronic conception}}
       \fr{\textbf{Développement embarqué, conception mécanique et électronique}}\\
       \textsc{Mainbot} Paris. \en{November}\fr{Novembre} 2016 -- \en{April}\fr{Avril} 2017\\
@@ -195,6 +211,7 @@ rightmargin=15pt}
       }}
 
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{Industrial designer}}
       \fr{\textbf{Dessinateur-Projeteur industriel}}\\
       \textsc{Boubiela Moret} Saint-Quentin. \en{May}\fr{Mai} 2013 -- \en{November}\fr{Novembre} 2015\\
@@ -216,18 +233,10 @@ rightmargin=15pt}
 \begin{cvSidebar}
   \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
 
-  \begin{cvContact}
-    \cvContactAddress{Valenciennes (59)}
-    \cvContactEmail{mailto:abara.pro24@gmail.com}{abara.pro24@gmail.com}
-    \cvContactPhone{+33 6 31 54 80 24}
-    \cvContactWebsite{https://github.com/banthony42}{github.com/banthony42}
-    \cvContactLinkedin{https://www.linkedin.com/in/anthony-bara-65b2a8125/}{anthonybara}
-  \end{cvContact}
-
-
+  \cvContactSideBar
 
   \begin{cvProjects}
-    \cvProject[link=https://github.com/banthony42/rpg]{\texttt{Tribute to Dofus}}{
+    \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Tribute to Dofus}}}{
       \en{\enum{
           \color{white}
           \item Enjoy learning Rust trying to develop a connected RPG.
@@ -241,7 +250,7 @@ rightmargin=15pt}
           \item Initiative: personnel
         }}
     }
-    \cvProject[link=https://github.com/banthony42/xv]{\texttt{XV}}{
+    \cvProject[link=https://github.com/banthony42/xv]{\SideBarLinkColor{\texttt{XV}}}{
       \en{\enum{
           \color{white}
           \item Animated industrial tasks viewer/editor.
@@ -262,28 +271,29 @@ rightmargin=15pt}
 
   \begin{cvEducation}
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{Rust Learning}}
       \fr{\textbf{Apprentissage du language Rust}}\\
       \en{Autodidact}\fr{Autodidacte}. \en{Since February}\fr{Depuis Février} 2024\\
       \en {\enum {
           \item Start learning by reading documentation (Rust Book).
           \item Then practice with exercices, data import with JSON and basic client-server chat implementation.
-          \item Creation of Tribute to Dofus, the early days of a connected RPG project:
+          \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Tribute to Dofus}}, the early days of a connected RPG project:
           \begin {myitems}
           \item The only ambition is to learn Rust and enjoy trying to develop a connected RPG.
           \item Graphic client using 'piston' crate.
-          \item Client-server communicate using GRPC with 'tonic'.
+          \item Client-server communicate using \MainLinkColor{\href{https://grpc.io/}{GRPC}} with 'tonic'.
           \item Server-database communicate using an ORM, with 'diesel'.
           \item Asynchronous tasks for requests, using 'tokyo'.
           \item CLI tool to manage players accounts, using 'clap'.
           \item Tilemaps are imported as JSON to practice with 'serde'.
-          \item Game maps drawn in pixel art using Aseprite.
+          \item Game maps drawn in pixel art using \MainLinkColor{\href{https://www.aseprite.org/}{Aseprite}}.
           \end {myitems}
         }}
       \fr{\enum{
           \item Début d'apprentissage par lecture de documentations (Rust Book).
           \item Mise en pratique avec des excercices simple, import de données au format JSON, implementation d'un chat basique (client-serveur).
-          \item Création de Tribute to Dofus, les balbutiments d'un RPG connecté:
+          \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Tribute to Dofus}}, les balbutiments d'un RPG connecté:
           \begin {myitems}
           \item La seule ambition est d'apprendre le Rust, tout en prenant plaisir à coder un RPG connecté.
           \item Client graphique basé sur le crate 'piston'.
@@ -298,9 +308,10 @@ rightmargin=15pt}
     }
 
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{Numeric architect diploma}}
       \fr{\textbf{Diplôme d'architecte du numérique}}\\
-      \en{42 school}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020\\
+      \en{42}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020\\
       \en{
         \enum{
           \item Learning through projects implementation.
@@ -327,6 +338,7 @@ rightmargin=15pt}
     }
 
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{Bachelor of Science in informatic conception engineering}}
       \fr{\textbf{Licence Professionnelle Ingénierie de la Conception Informatisée}}\\
       UPJV Saint-Quentin. \en{September}\fr{Septembre} 2012 -- \en{May}\fr{Mai} 2013\\
@@ -343,6 +355,7 @@ rightmargin=15pt}
     }
 
     \cvItem{
+      \color{mainFontColor}
       \en{\textbf{BTEC Industrial Mecanic and Automation}}
       \fr{\textbf{BTS Mécanique Automatisme Industriel}}\\
       \en{High school}\fr{Lycée} Condorcet Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012\\
