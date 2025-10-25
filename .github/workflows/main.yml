@@ -14,7 +14,7 @@ jobs:
         with:
           scheme: full
       - name: Install dependencies
-          run: |
+        run: |
             tlmgr install \
             l3kernel \
             l3packages \
