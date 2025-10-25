@@ -13,42 +13,6 @@ jobs:
       - uses: xu-cheng/texlive-action@v3
         with:
           scheme: full
-      - name: Install dependencies
-        run: |
-            tlmgr install \
-            l3kernel \
-            l3packages \
-            listings \
-            pgf \
-            tools \
-            graphics \
-            xkeyval \
-            hyperref \
-            xcolor \
-            cleveref \
-            etoolbox \
-            oberdiek \
-            ifxetex \
-            ifluatex \
-            tools \
-            url \
-            parskip \
-            xstring \
-            fontspec \
-            fontawesome5 \
-            lipsum \
-            zapfding \
-            luaotfload \
-            cjk \
-            xecjk \
-            fandol \
-            dvipdfmx \
-            pdfescape \
-            letltxmacro \
-            luatexbase \
-            ctex \
-            bitset
-
       - name: Build .pdf and place them in release folder
         run: |
           make pdf
