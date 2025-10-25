@@ -1,6 +1,7 @@
 name: CV pdf builder
 
 on:
+  workflow_dispatch:
   push:
     tags:
       - v*
