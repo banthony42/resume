@@ -9,13 +9,14 @@ jobs:
   build_latex:
     runs-on: ubuntu-latest
     steps:
+      - name: Build PDF
       - uses: actions/checkout@v4
       - uses: xu-cheng/texlive-action@v3
         with:
           run: |
             make pdf
 
-      - name: GH Release
+      - name: Create new release
         uses: softprops/action-gh-release@v2.0.8
         with:
           files: "*.pdf"
