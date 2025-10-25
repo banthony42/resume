@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: xu-cheng/texlive-action@v3
+      - uses: hspaans/latexmk-action@v2.1.0
       - name: Build .pdf and place them in release folder
         run: |
           make pdf
