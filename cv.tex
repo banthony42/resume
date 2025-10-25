@@ -3,6 +3,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{graphicx}
 
 % Defaults used in template design.
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
@@ -71,8 +72,8 @@ rightmargin=15pt}
   \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
 
   \begin{cvProfile}
-    \en{From Grafcet on old programmable logic controller, to the famous french educational platform OpenClassRoom, to finally land at 42 school.\\The path to becoming a developer was exciting and each new road I take now is even more so. Passionate about programming and curious to learn. My recent professional years have taught me that my main strength is my tenacity.}
-    \fr{Des Grafcets sur de vieux automates industriels, à OpenClassRoom en passant par l'école 42.\\Le chemin pour devenir développeur fut passionnant et chaque nouvelle route que j'emprunte à présent l'est plus encore. Passionné de programmation et curieux d'apprendre.\\Mes récentes années professionnelles m'ont enseignées que ma principale force est ma tenacité.}
+    \en{From working with Grafcet on old programmable logic controllers to studying on the renowed French educational platform OpenClassRooms, and finally joining 42 school.\\My path to becoming a software engineer has been an exciting one, and each new road I take now is even more so. Passionate about programming and eager to learn, over time I have learned that my main strength is my tenacity.}
+    \fr{Des Grafcets sur de vieux automates industriels, à OpenClassRoom en passant par l'école 42.\\Le chemin pour devenir développeur fut passionnant et chaque nouvelle route que j'emprunte à présent l'est plus encore. Passionné de programmation et curieux d'apprendre,\\ le temps m'a appris que ma principale force est ma tenacité.}
   \end{cvProfile}
 
   \cvContactSideBar
@@ -98,14 +99,13 @@ rightmargin=15pt}
       \en{\textbf{Software engineer}}
       \fr{\textbf{Ingénieur logiciel sur un Système de Détection d'Intrusion réseau.}}
       \\
-      \textsc{\selectfont P1 Security}, Paris. \en{since January}\fr{Depuis Janvier} 2020\\
+      \textsc{\selectfont P1 Security}, Paris. \en{Since January}\fr{Depuis Janvier} 2020\\
       \en{\enum{
-          \item Within Network Intrusion Detection System development team, for Telecom signaling traffic.
-          \item Development, maintainance and test all the staks of the software.
-          \item Technical debt resolution.
+          \item As part of the Network Intrusion Detection System (NIDS) development team, focusing on Telecom signaling traffic.
+          \item Development, maintenance, technical debt resolution and testing across all layers of the software.
           \item \textnormal{\textit{Backend}}: C, Lua, Python, Django, Bash
           \begin {myitems}
-          \item Rework and improvement of the asynchronous API REST client, keeping it highly configurable.
+          \item Rework and improvement of the asynchronous REST API client, with stong configuration constraints.
           \item Improvement of the packet history system
           \item Rewrite and improvement of the Elasticsearch instance manager (Mappings, Templates, Lifecycles)
           \item Added support for OpenIDConnect
@@ -113,28 +113,27 @@ rightmargin=15pt}
           \item \textnormal{\textit{Frontend}}: CSS, JS, Kibana
           \begin {myitems}
           \item Creation of Kibana visualizations and dashboards.
-          \item Kibana pages integrations into the software's web interface.
+          \item Integrations of Kibana views into the software's web interface.
           \end {myitems}
           \item \textnormal{\textit{Database}}: Redis, Elasticsearch
           \begin {myitems}
-          \item Production ready tool, to handle automatic database migration after Elasticsearch upgrade. (5.6 -> 7.10)
-          \item Resolutions of data format changes, without losses (10 to 40 million documents).
+          \item Production-ready tool for handling automatic database migration after Elasticsearch upgrade.
+          \item Resolution of data format changes, without loss (10 to 40 million documents).
           \end {myitems}
-          \item \textnormal{\textit{Continuous integration}}: Jenkins, Python, bash
+          \item \textnormal{\textit{Continuous Integration}}: Jenkins, Python, bash
           \begin {myitems}
-          \item Devops on a Jenkins CI composed of a master node and five agents.
-          \item Maintenance and development: test pipeline, unit tests, functional / end-to-end tests.
+          \item Jenkins devops tasks (one master node and five agents).
+          \item VMs maintenance, test pipeline updates, unit tests, functional tests, end-to-end tests.
           \end {myitems}
         }
       }
       \fr{\enum{
           \item Au sein de l'équipe de développement d'un IDS pour les réseaux Telecom, sur le traffic de signalisation.
-          \item Développement, maintenance et test sur toutes les couches du logiciel.
-          \item Résolutions de la dette technique.
+          \item Développement, maintenance, résolutions de la dette technique et test sur toutes les couches du logiciel.
           \item \textnormal{\textit{Backend}}: C, Lua, Python, Django, Bash\\
           \begin {myitems}
           \item Réécriture et amélioration d'un client API REST asynchrone, avec de fortes contraintes de configuration.
-          \item Amélioration du système d'historisation des paquets
+          \item Amélioration du système d'historisation des paquets.
           \item Réécriture et amélioration d'un gestionnaire d'instance Elasticsearch. (Mappings, Templates, Lifecycles)
           \item Ajout de la prise en charge d'OpenIDConnect.
           \end {myitems}
@@ -145,13 +144,13 @@ rightmargin=15pt}
           \end {myitems}
           \item \textnormal{\textit{Base de données}}: Redis, Elasticsearch
           \begin {myitems}
-          \item Outil de migration automatique de la base de données, en production, suite à la mise à jour d'Elasticsearch\\(5.6 -> 7.10).
+          \item Outil de migration automatique de la base de données, en production, suite à la mise à jour d'Elasticsearch.\\
           \item Résolutions des changements de format de données, sans pertes (10 à 40 millions de documents).
           \end {myitems}
           \item \textnormal{\textit{Tests d'intégration continue}}: Jenkins, Python, Bash\\
           \begin {myitems}
-          \item Devops sur une CI Jenkins composé d'un noeud master et de cinq agents.\\
-          \item Maintenance et développement: pipeline de tests, tests unitaires, fonctionnels et de bout en bout.
+          \item Devops sur une CI Jenkins (un master et cinq agents).\\
+          \item Maintenance et développement: pipeline de tests, tests unitaires, tests fonctionnels et de bout en bout.
           \end {myitems}
         }}
     }
@@ -162,9 +161,9 @@ rightmargin=15pt}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{May}\fr{Mai} 2019 -- \en{October}\fr{Octobre} 2019\\
       \en{\enum{
-          \item New feature development for the robot, keeping in mind to supply good public interface for the SDK users (C\#/Unity).
+          \item Development of new features for the robot, focusing on providing a good public interface for the SDK users (C\#/Unity).
           \item Maintenance of the existing code base.
-          \item Code review and agile method.
+          \item Code reviews and agile methodology.
         }}
       \fr{\enum{
           \item Développement de nouvelles fonctionnalités avec une attention particulière pour fournir une interface de qualité pour les utilisateurs du SDK (C\#/Unity).
@@ -179,27 +178,27 @@ rightmargin=15pt}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{September}\fr{Septembre} 2018 -- \en{March}\fr{Mars} 2019\\
       \en{\enum{
-          \item Applications development using internal SDK (C\#/Unity).
+          \item Application development using internal SDK (C\#/Unity).
           \item Development of an app to easily run non-regression automated tests.
           \item Rework and maintenance of existing apps.
-          \item Code review and agile method.
+          \item Code reviews and agile methodology.
         }}
       \fr{\enum{
           \item Développement d'applications basé sur le SDK interne (C\#/Unity).
-          \item Développement de tests automatisés de non régression.
+          \item Développement de tests non régression automatisés.
           \item Réécriture et maintenance des applications existantes.
           \item Revue de code et méthode agile.
         }}
     }
     \cvItem{
       \color{mainFontColor}
-      \en{\textbf{Embedded development and mechanic, electronic conception}}
+      \en{\textbf{Embedded development, mechanical and electronic design}}
       \fr{\textbf{Développement embarqué, conception mécanique et électronique}}\\
       \textsc{Mainbot} Paris. \en{November}\fr{Novembre} 2016 -- \en{April}\fr{Avril} 2017\\
       \en{\enum{
-          \item Winky robot first prototype development
-          \item Mechanical conception for 3D printing, using Solidworks.
-          \item Printed circuit board conception using Kicad.
+          \item Development of the first Winky robot prototype.
+          \item Mechanical design for 3D printing, using Solidworks.
+          \item Printed circuit board design using Kicad.
           \item Development on Arduino and Raspberry Pi. (C/C++)
         }}
       \fr{\enum{
@@ -216,9 +215,9 @@ rightmargin=15pt}
       \fr{\textbf{Dessinateur-Projeteur industriel}}\\
       \textsc{Boubiela Moret} Saint-Quentin. \en{May}\fr{Mai} 2013 -- \en{November}\fr{Novembre} 2015\\
       \en{\enum{
-          \item Design of loading equipments according to specifications.
-          \item Creation of 3D models and fabrication plans on Solidworks.
-          \item Monitoring part manufacturing and machine assembly.
+          \item Design of loading equipment according to specifications.
+          \item Creation of 3D models and fabrication plans using Solidworks.
+          \item Monitoring of part manufacturing and machine assembly.
         }}
       \fr{\enum{
           \item Conception de machines de manutention selon cahier des charges.
@@ -239,27 +238,27 @@ rightmargin=15pt}
     \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Tribute to Dofus}}}{
       \en{\enum{
           \color{white}
-          \item Enjoy learning Rust trying to develop a connected RPG.
+          \item Enjoy learning Rust while developing a multiplayer RPG.
           \item Status: In progress
-          \item Initiative: personal
+          \item Initiative: Personal project
         }}
       \fr{\enum{
           \color{white}
-          \item S'amuser à apprendre Rust en développant un RPG connecté.
+          \item S'amuser à apprendre Rust en développant un RPG multijoueur.
           \item Statut: En cours
-          \item Initiative: personnel
+          \item Initiative: Projet Personnel
         }}
     }
     \cvProject[link=https://github.com/banthony42/xv]{\SideBarLinkColor{\texttt{XV}}}{
       \en{\enum{
           \color{white}
-          \item Animated industrial tasks viewer/editor.
+          \item Animated industrial tasks editor and viewer.
           \item Status: Finished
-          \item Initiative: 42 school
+          \item Initiative: 42 School
         }}
       \fr{\enum{
           \color{white}
-          \item Visualisation et création de tâches industrielles animée.
+          \item Visualisation et création de tâches industrielles animées.
           \item Statut: Terminé
           \item Initiative: Ecole 42
         }}
@@ -276,13 +275,13 @@ rightmargin=15pt}
       \fr{\textbf{Apprentissage du language Rust}}\\
       \en{Autodidact}\fr{Autodidacte}. \en{Since February}\fr{Depuis Février} 2024\\
       \en {\enum {
-          \item Start learning by reading documentation (Rust Book).
-          \item Then practice with exercices, data import with JSON and basic client-server chat implementation.
-          \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Tribute to Dofus}}, the early days of a connected RPG project:
+          \item Started learning by reading documentation (Rust Book).
+          \item Then practiced with basic exercices, data import with JSON and basic client-server chat implementation.
+          \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Tribute to Dofus}}, a multiplayer RPG project:
           \begin {myitems}
-          \item The only ambition is to learn Rust and enjoy trying to develop a connected RPG.
+          \item The only ambition is to learn Rust and enjoy trying to develop a multiplayer game.
           \item Graphic client using 'piston' crate.
-          \item Client-server communicate using \MainLinkColor{\href{https://grpc.io/}{GRPC}} with 'tonic'.
+          \item Client-server communicate using \MainLinkColor{\href{https://grpc.io/}{gRPC }} with 'tonic'.
           \item Server-database communicate using an ORM, with 'diesel'.
           \item Asynchronous tasks for requests, using 'tokyo'.
           \item CLI tool to manage players accounts, using 'clap'.
@@ -291,55 +290,55 @@ rightmargin=15pt}
           \end {myitems}
         }}
       \fr{\enum{
-          \item Début d'apprentissage par lecture de documentations (Rust Book).
-          \item Mise en pratique avec des excercices simple, import de données au format JSON, implementation d'un chat basique (client-serveur).
-          \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Tribute to Dofus}}, les balbutiments d'un RPG connecté:
+          \item Début d'apprentissage par lecture de documentation (Rust Book).
+          \item Mise en pratique avec des excercices basique, import de données au format JSON, implementation d'un chat basique (client-serveur).
+          \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Tribute to Dofus}}, un RPG multijoueur:
           \begin {myitems}
-          \item La seule ambition est d'apprendre le Rust, tout en prenant plaisir à coder un RPG connecté.
+          \item La seule ambition est d'apprendre le Rust, tout en prenant plaisir à coder un jeu multijoueur.
           \item Client graphique basé sur le crate 'piston'.
-          \item Client et serveur communiquent en GRPC, avec 'tonic'.
+          \item Client et serveur communiquent en \MainLinkColor{\href{https://grpc.io/}{gRPC }} avec 'tonic'.
           \item Serveur et base de données communiquent au moyen d'un ORM, avec 'diesel'.
-          \item Tâches asynchrone pour les requêtes avec 'tokyo'.
+          \item Tâches asynchrones pour les requêtes avec 'tokyo'.
           \item Outil CLI pour gérer les comptes de joueurs avec 'clap'.
-          \item Import des tilemaps au format JSON pour pratiquer avec 'serde'.
-          \item Cartes du jeu dessinées en pixel art avec Aseprite.
+          \item Import des tilemaps en JSON pour pratiquer avec 'serde'.
+          \item Cartes du jeu dessinées en pixel art avec \MainLinkColor{\href{https://www.aseprite.org/}{Aseprite}}.
           \end {myitems}
         }}
     }
 
     \cvItem{
       \color{mainFontColor}
-      \en{\textbf{Numeric architect diploma}}
-      \fr{\textbf{Diplôme d'architecte du numérique}}\\
-      \en{42}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020\\
+      \en{\textbf{Certificate of Architect in digital technologies}}
+      \fr{\textbf{Certificat architecte du numérique}}\\
+      \begin{flushright}
+        \vspace{-1cm}
+        \includegraphics[keepaspectratio=true,height=2.5cm]{assets/42-cursus-computer-architect-level-21.1.png}
+        \hspace{0.2cm}
+        \vspace{-1.5cm}
+      \end{flushright}
+      \en{42 School}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020 \\
       \en{
         \enum{
-          \item Learning through projects implementation.
-          \item Peer code review, and reading documentations.
-          \item Intensive C practice rewriting well-known programm such as malloc, client-server ftp, basics of Wolfenstein 3D.\\
-          \item Then object-oriented programming :
-          \begin {myitems}
-          \item Nibbler, a snake game with dynamic graphic library switch at runtime (C++).
-          \item XV, an animated industrial tasks editor and viewer. Element animations, timeline implementation to handle the whole models animations, file manager to save the tasks simulation or to load an existing one, 3D object import at runtime (C\# - Unity).
-          \end {myitems}
+          \item Learning through project implementation.
+          \item Peer code reviews, and reading documentation.
+          \item Intensive C practice by rewriting well-known programs such as malloc, client-server ftp, basics of Wolfenstein 3D.\\
+          \item Nibbler, a snake game with several graphic interfaces by using dynamic graphic library switching at runtime (C++).
+          \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, an animated industrial task editor and viewer. (C\# - Unity).
         }}
       \fr {
         \enum{
-          \item Apprentissage du développement informatique par réalisation de projets.
+          \item Apprentissage par la réalisation de projets.
           \item Revue de code par les pairs et lecture de documentation.
-          \item Pratique intensive du C par la réécriture de programme bien connu comme malloc, un client-serveur ftp, un Wolfenstein 3D basique.
-          \item Puis de la programmation orientée objet :
-          \begin {myitems}
-          \item Nibbler, un jeu snake avec chargement de lib dynamique au runtime (C++).
-          \item XV, permet de visualiser et créer des tâches industrielles animée. Animation d'éléments entre eux, implémentation d'une timeline, d'un gestionnaire de fichier pour enregistrer la simulation ou en charger une existante, import d'objet 3D au runtime (C\# - Unity).
-          \end {myitems}
+          \item Pratique intensive du C par la réécriture de programmes bien connu comme malloc, un client-serveur ftp, un Wolfenstein 3D basique.
+          \item Nibbler, un jeu snake avec differentes interfaces graphiques. Chargement de bibliothèques dynamiques au runtime (C++).
+          \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, permet de visualiser et créer des tâches industrielles animées. (C\# - Unity).
         }
       }
     }
 
     \cvItem{
       \color{mainFontColor}
-      \en{\textbf{Bachelor of Science in informatic conception engineering}}
+      \en{\textbf{Bachelor's Degree in Computer-Aided Design engineering}}
       \fr{\textbf{Licence Professionnelle Ingénierie de la Conception Informatisée}}\\
       UPJV Saint-Quentin. \en{September}\fr{Septembre} 2012 -- \en{May}\fr{Mai} 2013\\
       \en{\enum{
@@ -358,9 +357,9 @@ rightmargin=15pt}
       \color{mainFontColor}
       \en{\textbf{BTEC Industrial Mecanic and Automation}}
       \fr{\textbf{BTS Mécanique Automatisme Industriel}}\\
-      \en{High school}\fr{Lycée} Condorcet Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012\\
+      \en{Condorcet High school}\fr{Lycée Condorcet} Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012\\
       \en{\enum{
-          \item Conception and maintenance of industrial machines and automated systems.
+          \item Design and maintenance of industrial machines and automated systems.
         }
       }
       \fr{\enum{
@@ -375,11 +374,11 @@ rightmargin=15pt}
     \cvSkillTwo{4}{Bash}{4}{Kibana}
     \cvSkillTwo{3}{Python \& Django}{4}{Redis}
     \cvSkillTwo{3}{VirtualBox / Vagrant}{2}{VMWare/ESXi}
-    \cvSkillTwo{2}{HTML/CSS}{2}{Javascript}
-    \cvSkillTwo{2}{C\#}{1}{C++}
-    \cvSkillTwo{2}{Rust - \en{\textbf{Active learning}}\fr{\textbf{Apprentissage actif}}}{1}{Docker}
+    \cvSkillTwo{3}{Rust - \en{\textbf{Active learning}}\fr{\textbf{Apprentissage actif}}}{2}{Javascript}
+    \cvSkillTwo{2}{HTML/CSS}{1}{Docker}
+    \cvSkillTwo{1}{C\#}{1}{C++}
+    \cvSkillOne{1}{PostgreSQL}
   \end{cvSkills}
-
 \end{cvMainContent}
 
 % \clearpage
