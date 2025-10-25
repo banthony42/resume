@@ -15,10 +15,6 @@ jobs:
           os: debian
           run: |
             export DEBIAN_FRONTEND=noninteractive
-            apt-get update -y
-            latexmk --version || echo "KO"
-            apt-get install -y qpdf
-            latexmk --version || echo "KO"
             make pdf
             cp *pdf ./release/
 
