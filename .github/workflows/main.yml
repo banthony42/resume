@@ -12,14 +12,11 @@ jobs:
       - uses: actions/checkout@v4
       - uses: xu-cheng/texlive-action@v3
         with:
-          os: debian
           run: |
-            export DEBIAN_FRONTEND=noninteractive
             make pdf
-            cp *pdf ./release/
 
       - name: GH Release
         uses: softprops/action-gh-release@v2.0.8
         with:
-          files: "./release/*.pdf"
+          files: "*.pdf"
           generateReleaseNotes: true
