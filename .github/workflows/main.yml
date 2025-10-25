@@ -19,11 +19,8 @@ jobs:
             latexmk --version || echo "KO"
             apt-get install -y qpdf
             latexmk --version || echo "KO"
-
-      - name: Build .pdf and place them in release folder
-        run: |
-          make pdf
-          cp *pdf ./release/
+            make pdf
+            cp *pdf ./release/
 
       - name: GH Release
         uses: softprops/action-gh-release@v2.0.8
