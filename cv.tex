@@ -54,6 +54,7 @@ rightmargin=15pt}
 \definecolor{mainFontColor}{HTML}{071952}
 \newcommand{\SideBarLinkColor}[1]{\color{cyan}#1\color{white}}
 \newcommand{\MainLinkColor}[1]{\color{cyan}#1\color{mainFontColor}}
+\newcommand{\DocumentVersionColor}[1]{\color{071952}#1\color{mainFontColor}}
 
 \newcommand{\cvContactSideBar}{
   \begin{cvContact}
@@ -65,10 +66,16 @@ rightmargin=15pt}
   \end{cvContact}
 }
 
+\newcommand{\DocumentVersion}{
+  \begin{center}
+    \color{cvGreen}
+    \href{https://github.com/banthony42/resume}{Version 0.0.0\\{\faExternalLink*} powered by LaTeX}
+  \end{center}
+}
+
 \begin{document}
 
 \begin{cvSidebar}
-
   \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
 
   \begin{cvProfile}
@@ -89,6 +96,8 @@ rightmargin=15pt}
     \cvInterest{\faPen}{\en{3D modelling, pixel art}\fr{Modélisation 3D, Pixel art}}
     \cvInterest{\faTree}{\en{Fishing}\fr{Pêche}}
   \end{cvInterests}
+  \vspace{5.5cm}
+  \DocumentVersion
 \end{cvSidebar}
 
 \begin{cvMainContent}
@@ -235,7 +244,7 @@ rightmargin=15pt}
   \cvContactSideBar
 
   \begin{cvProjects}
-    \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Tribute to Dofus}}}{
+    \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures}}}{
       \en{\enum{
           \color{white}
           \item Enjoy learning Rust while developing a multiplayer RPG.
@@ -262,6 +271,8 @@ rightmargin=15pt}
           \item Statut: Terminé
           \item Initiative: Ecole 42
         }}
+      \vspace{9.5cm}
+      \DocumentVersion
     }
   \end{cvProjects}
 \end{cvSidebar}
@@ -277,7 +288,7 @@ rightmargin=15pt}
       \en {\enum {
           \item Started learning by reading documentation (Rust Book).
           \item Then practiced with basic exercices, data import with JSON and basic client-server chat implementation.
-          \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Tribute to Dofus}}, a multiplayer RPG project:
+          \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, a multiplayer RPG project:
           \begin {myitems}
           \item The only ambition is to learn Rust and enjoy trying to develop a multiplayer game.
           \item Graphic client using 'piston' crate.
@@ -292,7 +303,7 @@ rightmargin=15pt}
       \fr{\enum{
           \item Début d'apprentissage par lecture de documentation (Rust Book).
           \item Mise en pratique avec des excercices basique, import de données au format JSON, implementation d'un chat basique (client-serveur).
-          \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Tribute to Dofus}}, un RPG multijoueur:
+          \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, un RPG multijoueur:
           \begin {myitems}
           \item La seule ambition est d'apprendre le Rust, tout en prenant plaisir à coder un jeu multijoueur.
           \item Client graphique basé sur le crate 'piston'.
