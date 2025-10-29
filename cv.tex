@@ -55,7 +55,7 @@ rightmargin=15pt}
 \newcommand{\SideBarLinkColor}[1]{\color{cyan}#1\color{white}}
 \newcommand{\MainLinkColor}[1]{\color{cyan}#1\color{mainFontColor}}
 \newcommand{\DocumentVersionColor}[1]{\color{071952}#1\color{mainFontColor}}
-\newcommand{\SideBarVSpace}{\vspace{0.5cm}}
+\newcommand{\SideBarVSpace}{\vspace{0.2cm}}
 \newcommand{\DocumentVersionSpaceOne}{\vspace{2cm}}
 \newcommand{\DocumentVersionSpaceTwo}{\vspace{9cm}}
 
@@ -74,40 +74,64 @@ rightmargin=15pt}
 \newcommand{\DocumentVersion}{
   \begin{center}
     \color{cvGreen}
-    \href{https://github.com/banthony42/resume}{Version 0.0.1 \en{10-27-2025}\fr{27/10/2025}\\{\faExternalLink*} powered by LaTeX}
+    \href{https://github.com/banthony42/resume}{\small{Version 0.0.1 \en{10-27-2025}\fr{27/10/2025}\\{\faExternalLink*} powered by LaTeX}}
   \end{center}
 }
 
 \begin{document}
 \begin{cvSidebar}
   \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
-
   \begin{cvProfile}
     \en{From working with Grafcet on old programmable logic controllers to studying on the renowed French educational platform OpenClassRooms, and finally joining 42 school.\\My path to becoming a software engineer has been an exciting one, and each new road I take now is even more so. Passionate about programming and eager to learn, over time I have learned over time that my main strength is my tenacity.}
     \fr{Des Grafcets sur de vieux automates industriels, à OpenClassRoom en passant par l'école 42.\\Le chemin pour devenir développeur fut passionnant et chaque nouvelle route que j'emprunte à présent l'est plus encore. Passionné de programmation et curieux d'apprendre,\\ le temps m'a appris que ma principale force est ma tenacité.}
   \end{cvProfile}
-  \SideBarVSpace
   \cvContactSideBar
-
-  \SideBarVSpace
   \begin{cvLanguages}
     \cvLanguage{\en{French (native)}\fr{Français (natif)}}{5}
     \cvLanguage{\en{English (B1)}\fr{Anglais (B1)}}{3.5}
   \end{cvLanguages}
-
-  \SideBarVSpace
+  \begin{cvProjects}
+    \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures}}}{
+      \en{\enum{
+          \color{white}
+          \item Multiplayer RPG in Rust
+          \item Status: In progress
+          \item Initiative: Personal project
+        }}
+      \fr{\enum{
+          \color{white}
+          \item RPG multijoueur en Rust
+          \item Statut: En cours
+          \item Initiative: Projet Personnel
+        }}
+    }
+    \cvProject[link=https://github.com/banthony42/xv]{\SideBarLinkColor{\texttt{XV}}}{
+      \en{\enum{
+          \color{white}
+          \item Animated industrial tasks editor and viewer.
+          \item Status: Finished (2019)
+          \item Initiative: 42 School
+        }}
+      \fr{\enum{
+          \color{white}
+          \item Visualisation et création de tâches industrielles animées.
+          \item Statut: Terminé (2019)
+          \item Initiative: Ecole 42
+        }}
+    }
+  \end{cvProjects}
   \begin{cvInterests}[short]
     \cvInterest{\faMusic}{\en{Guitar}\fr{Guitare}}
     \cvInterest{\faGamepad}{\en{Gaming}\fr{Jeux vidéo}}
     \cvInterest{\faPen}{\en{3D modelling, pixel art}\fr{Modélisation 3D, Pixel art}}
     \cvInterest{\faTree}{\en{Fishing}\fr{Pêche}}
   \end{cvInterests}
-  \DocumentVersionSpaceOne
+  \vspace{0.2cm}
   \DocumentVersion
+  \vspace{-1cm}
 \end{cvSidebar}
 
 \begin{cvMainContent}
-
   \begin{cvExperience}
     \cvItem{
       \color{mainFontColor}
@@ -143,30 +167,17 @@ rightmargin=15pt}
         }
       }
       \fr{\enum{
-          \item Au sein de l'équipe de développement d'un IDS pour les réseaux Telecom, sur le traffic de signalisation.
-          \item Développement, maintenance, résolution de la dette technique et test sur toutes les couches du logiciel.
-          \item \textnormal{\textit{Backend}}: C, Lua, Python, Django, Bash\\
-          \begin {myitems}
-          \item Client API REST asynchrone configurable - Historisation des paquets - CLI pour Elasticsearch - OpenIDConnect.
-          \end {myitems}
-          \item \textnormal{\textit{Frontend}}: CSS, JS, Kibana\\
-          \begin {myitems}
-          \item Dashboard Kibana (création et intégration).
-          \end {myitems}
-          \item \textnormal{\textit{Base de données}}: Redis, Elasticsearch
-          \begin {myitems}
-          \item Migration automatique des données Elasticsearch.
-          \end {myitems}
-          \item \textnormal{\textit{Tests d'intégration continue}}: Jenkins, Python, Bash\\
-          \begin {myitems}
+          \item Développement d'un IDS réseaux, dans un environnement Telco.
+          \item Traitement du traffic en temps reel. (C / Lua)
+          \item Maintenance, résolution de dette technique.
           \item Devops CI Jenkins (un master et cinq agents) - Pipeline de tests - Tests unitaires, fonctionnels, de bout en bout.
-          \end {myitems}
+          \item Prototypage d'une plateforme de suivi client (Rust - actix - sqlx - serde - tokio - askama - Terraform)
         }}
     }
     \cvItem{
       \color{mainFontColor}
-      \en{\textbf{SDK software developer for a robot.}}
-      \fr{\textbf{Développeur logiciel SDK pour robot.}}
+      \en{\textbf{Software developer for a robot.}}
+      \fr{\textbf{Développeur logiciel pour robot.}}
       \\
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{May}\fr{Mai} 2019 -- \en{October}\fr{Octobre} 2019\\
       \en{\enum{
@@ -197,11 +208,9 @@ rightmargin=15pt}
       \fr{\textbf{Développement embarqué, conception mécanique et électronique}}\\
       \textsc{Mainbot} Paris. \en{November}\fr{Novembre} 2016 -- \en{April}\fr{Avril} 2017\\
       \en{\enum{
-          \item Development of the first Winky robot prototype.
           \item Programming (C/C++) - DAO (Solidworks / Kicad)
         }}
       \fr{\enum{
-          \item Développement du premier prototype du robot Winky
           \item Développement (C/C++) - CAO (Solidworks / Kicad)
         }
       }}
@@ -218,52 +227,6 @@ rightmargin=15pt}
           \item CAO (Solidworks) - Gestion de projets
         }}};
   \end{cvExperience}
-\end{cvMainContent}
-
-\newpage
-
-\begin{cvSidebar}
-  \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
-
-  \cvContactSideBar
-
-  \SideBarVSpace
-  \begin{cvProjects}
-    \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures}}}{
-      \en{\enum{
-          \color{white}
-          \item Multiplayer RPG in Rust
-          \item Status: In progress
-          \item Initiative: Personal project
-        }}
-      \fr{\enum{
-          \color{white}
-          \item RPG multijoueur en Rust
-          \item Statut: En cours
-          \item Initiative: Projet Personnel
-        }}
-    }
-    \cvProject[link=https://github.com/banthony42/xv]{\SideBarLinkColor{\texttt{XV}}}{
-      \en{\enum{
-          \color{white}
-          \item Animated industrial tasks editor and viewer.
-          \item Status: Finished (2019)
-          \item Initiative: 42 School
-        }}
-      \fr{\enum{
-          \color{white}
-          \item Visualisation et création de tâches industrielles animées.
-          \item Statut: Terminé (2019)
-          \item Initiative: Ecole 42
-        }}
-      \DocumentVersionSpaceTwo
-      \DocumentVersion
-    }
-  \end{cvProjects}
-\end{cvSidebar}
-
-\begin{cvMainContent}
-
   \begin{cvEducation}
     \cvItem{
       \color{mainFontColor}
@@ -279,7 +242,7 @@ rightmargin=15pt}
           \end {myitems}
         }}
       \fr{\enum{
-          \item Rust Book - \ZeroToProductionRust - \RustForRustaceans
+          \item Rust Book - \ZeroToProductionRust\\\RustForRustaceans
           \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, un RPG multijoueur:
           \begin {myitems}
           \item gRPC (tonic) - PostgreSQL via ORM (diesel) - Tâches asynchrones (tokyo) - Outil d'administration CLI (clap) - Import d'assets JSON (serde).
@@ -293,10 +256,10 @@ rightmargin=15pt}
       \en{\textbf{Certificate of Architect in digital technologies}}
       \fr{\textbf{Certificat architecte du numérique}}\\
       \begin{flushright}
-        \vspace{-1cm}
-        \includegraphics[keepaspectratio=true,height=2.5cm]{assets/42-cursus-computer-architect-level-21.1.png}
-        \hspace{0.2cm}
-        \vspace{-1.5cm}
+        \vspace{-1.2cm}
+        \includegraphics[keepaspectratio=true,height=2cm]{assets/42-cursus-computer-architect-level-21.1.png}
+        \hspace{1cm}
+        \vspace{-0.8cm}
       \end{flushright}
       \en{42 School}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020 \\
       \en{
@@ -306,11 +269,6 @@ rightmargin=15pt}
           \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, Real-time 3D (C\# - Unity).
         }}
       \fr {
-        \enum{
-          \item Revue de code - Pratique intensive du C : malloc, \\ nm, otool, trojan, client-serveur ftp, Wolfenstein3D.
-          \item Nibbler, un jeu snake avec differentes interfaces graphiques. Chargement de bibliothèques dynamiques au runtime (C++).
-          \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, 3D temps réel (C\# - Unity).
-        }
       }
     }
 
@@ -326,7 +284,6 @@ rightmargin=15pt}
       \fr{\textbf{BTS Mécanique Automatisme Industriel}}\\
       \en{Condorcet High school}\fr{Lycée Condorcet} Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012}
   \end{cvEducation}
-
   \begin{cvSkills}
     \cvSkillOne{4}{C - Lua - Bash - Linux - Redis - Git}
     \cvSkillOne{4}{Elasticsearch - Kibana}
@@ -336,6 +293,127 @@ rightmargin=15pt}
     \cvSkillOne{1}{PostgreSQL - LaTeX - C\# - C++}
   \end{cvSkills}
 \end{cvMainContent}
+
+% \newpage
+
+% \begin{cvSidebar}
+%   \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
+
+%   \cvContactSideBar
+
+%   \SideBarVSpace
+%   \begin{cvProjects}
+%     \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures}}}{
+%       \en{\enum{
+%           \color{white}
+%           \item Multiplayer RPG in Rust
+%           \item Status: In progress
+%           \item Initiative: Personal project
+%         }}
+%       \fr{\enum{
+%           \color{white}
+%           \item RPG multijoueur en Rust
+%           \item Statut: En cours
+%           \item Initiative: Projet Personnel
+%         }}
+%     }
+%     \cvProject[link=https://github.com/banthony42/xv]{\SideBarLinkColor{\texttt{XV}}}{
+%       \en{\enum{
+%           \color{white}
+%           \item Animated industrial tasks editor and viewer.
+%           \item Status: Finished (2019)
+%           \item Initiative: 42 School
+%         }}
+%       \fr{\enum{
+%           \color{white}
+%           \item Visualisation et création de tâches industrielles animées.
+%           \item Statut: Terminé (2019)
+%           \item Initiative: Ecole 42
+%         }}
+%       \DocumentVersionSpaceTwo
+%       \DocumentVersion
+%     }
+%   \end{cvProjects}
+% \end{cvSidebar}
+
+% \begin{cvMainContent}
+
+%   \begin{cvEducation}
+%     \cvItem{
+%       \color{mainFontColor}
+%       \en{\textbf{Rust Learning}}
+%       \fr{\textbf{Apprentissage du Rust}}\\
+%       \en{Autodidact}\fr{Autodidacte}. \en{Since February}\fr{Depuis Février} 2024\\
+%       \en {\enum {
+%           \item Rust Book
+%           \item \ZeroToProductionRust
+%           \item \RustForRustaceans
+%           \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, a multiplayer RPG project:
+%           \begin {myitems}
+%           \item gRPC (tonic) - PostgreSQL using an ORM (diesel) - Asynchronous tasks (tokyo) - Admin CLI tool (clap) - JSON assets import (serde).
+%           \item Pixel art using (\MainLinkColor{\href{https://www.aseprite.org/}{Aseprite})}.
+%           \end {myitems}
+%         }}
+%       \fr{\enum{
+%           \item Rust Book
+%           \item \ZeroToProductionRust
+%           \item \RustForRustaceans
+%           \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, un RPG multijoueur:
+%           \begin {myitems}
+%           \item gRPC (tonic) - PostgreSQL via ORM (diesel) - Tâches asynchrones (tokyo) - Outil d'administration CLI (clap) - Import d'assets JSON (serde).
+%           \item Pixel art (\MainLinkColor{\href{https://www.aseprite.org/}{Aseprite})}.
+%           \end {myitems}
+%         }}
+%     }
+
+%     \cvItem{
+%       \color{mainFontColor}
+%       \en{\textbf{Certificate of Architect in digital technologies}}
+%       \fr{\textbf{Certificat architecte du numérique}}\\
+%       \begin{flushright}
+%         \vspace{-1cm}
+%         \includegraphics[keepaspectratio=true,height=2.5cm]{assets/42-cursus-computer-architect-level-21.1.png}
+%         \hspace{0.2cm}
+%         \vspace{-1.5cm}
+%       \end{flushright}
+%       \en{42 School}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020 \\
+%       \en{
+%         \enum{
+%           \item Code reviews - Intensive C practice : malloc, \\ nm, otool, trojan, ftp client-server, Wolfenstein 3D.
+%           \item Nibbler, a snake game with several graphic interfaces by using dynamic graphic library switching at runtime (C++).
+%           \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, Real-time 3D (C\# - Unity).
+%         }}
+%       \fr {
+%         \enum{
+%           \item Revue de code - Pratique intensive du C
+%           \item Nibbler, un jeu snake avec differentes interfaces graphiques. Chargement de bibliothèques dynamiques au runtime (C++).
+%           \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, 3D temps réel (C\# - Unity).
+%         }
+%       }
+%     }
+
+%     \cvItem{
+%       \color{mainFontColor}
+%       \en{\textbf{Bachelor's Degree in Computer-Aided Design engineering}}
+%       \fr{\textbf{Licence Professionnelle Ingénierie de la Conception Informatisée}}\\
+%       UPJV Saint-Quentin. \en{September}\fr{Septembre} 2012 -- \en{May}\fr{Mai} 2013}
+
+%     \cvItem{
+%       \color{mainFontColor}
+%       \en{\textbf{BTEC Industrial Mecanic and Automation}}
+%       \fr{\textbf{BTS Mécanique Automatisme Industriel}}\\
+%       \en{Condorcet High school}\fr{Lycée Condorcet} Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012}
+%   \end{cvEducation}
+
+%   \begin{cvSkills}
+%     \cvSkillOne{4}{C - Lua - Bash - Linux - Redis - Git}
+%     \cvSkillOne{4}{Elasticsearch - Kibana}
+%     \cvSkillOne{3}{Rust (\en{\textbf{Active learning}}\fr{\textbf{Apprentissage actif}}) - VMWare - ESXi}
+%     \cvSkillOne{3}{Python - Django - Docker - VirtualBox - Vagrant - ssh}
+%     \cvSkillOne{2}{HTML - CSS - Javascript - Wireshark - Make}
+%     \cvSkillOne{1}{PostgreSQL - LaTeX - C\# - C++}
+%   \end{cvSkills}
+% \end{cvMainContent}
 
 % \clearpage
 
