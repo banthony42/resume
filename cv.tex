@@ -9,7 +9,7 @@
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
 % Define which language to use
-\usepackage[fr]{optional}
+\usepackage[en]{optional}
 
 % Languages settings
 \opt{en}{\usepackage[english]{babel}}
@@ -59,6 +59,8 @@ rightmargin=15pt}
 \newcommand{\DocumentVersionSpaceOne}{\vspace{2cm}}
 \newcommand{\DocumentVersionSpaceTwo}{\vspace{9cm}}
 
+\newcommand{\ZeroToProductionRust}{\MainLinkColor{\href{https://www.zero2prod.com/index.html?country=France&discount_code=VAT20&country_code=FR}{Zero to production in Rust }\color{mainFontColor}L.Palmieri}}
+\newcommand{\RustForRustaceans}{\MainLinkColor{\href{https://rust-for-rustaceans.com/}{Rust for Rustaceans }\color{mainFontColor}J.Gjengset}}
 \newcommand{\cvContactSideBar}{
   \begin{cvContact}
     \cvContactAddress{Valenciennes (59)}
@@ -252,13 +254,13 @@ rightmargin=15pt}
     \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures}}}{
       \en{\enum{
           \color{white}
-          \item Enjoy learning Rust while developing a multiplayer RPG.
+          \item Multiplayer RPG in Rust
           \item Status: In progress
           \item Initiative: Personal project
         }}
       \fr{\enum{
           \color{white}
-          \item S'amuser à apprendre Rust en développant un RPG multijoueur.
+          \item RPG multijoueur en Rust
           \item Statut: En cours
           \item Initiative: Projet Personnel
         }}
@@ -267,13 +269,13 @@ rightmargin=15pt}
       \en{\enum{
           \color{white}
           \item Animated industrial tasks editor and viewer.
-          \item Status: Finished
+          \item Status: Finished (2019)
           \item Initiative: 42 School
         }}
       \fr{\enum{
           \color{white}
           \item Visualisation et création de tâches industrielles animées.
-          \item Statut: Terminé
+          \item Statut: Terminé (2019)
           \item Initiative: Ecole 42
         }}
       \DocumentVersionSpaceTwo
@@ -288,36 +290,22 @@ rightmargin=15pt}
     \cvItem{
       \color{mainFontColor}
       \en{\textbf{Rust Learning}}
-      \fr{\textbf{Apprentissage du langage Rust}}\\
+      \fr{\textbf{Apprentissage du Rust}}\\
       \en{Autodidact}\fr{Autodidacte}. \en{Since February}\fr{Depuis Février} 2024\\
       \en {\enum {
-          \item Started learning by reading documentation (Rust Book).
-          \item Then practiced with basic exercices, data import with JSON and basic client-server chat implementation.
+          \item Rust Book - \ZeroToProductionRust - \RustForRustaceans
           \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, a multiplayer RPG project:
           \begin {myitems}
-          \item The only ambition is to learn Rust and enjoy trying to develop a multiplayer game.
-          \item Graphic client using 'piston' crate.
-          \item Client-server communicate using \MainLinkColor{\href{https://grpc.io/}{gRPC }} with 'tonic'.
-          \item Server-database communicate using an ORM, with 'diesel'.
-          \item Asynchronous tasks for requests, using 'tokyo'.
-          \item CLI tool to manage players accounts, using 'clap'.
-          \item Tilemaps are imported as JSON to practice with 'serde'.
-          \item Game maps drawn in pixel art using \MainLinkColor{\href{https://www.aseprite.org/}{Aseprite}}.
+          \item gRPC (tonic) - PostgreSQL using an ORM (diesel) - Asynchronous tasks (tokyo) - Admin CLI tool (clap) - JSON assets import (serde).
+          \item Pixel art using (\MainLinkColor{\href{https://www.aseprite.org/}{Aseprite})}.
           \end {myitems}
         }}
       \fr{\enum{
-          \item Début d'apprentissage par lecture de documentation (Rust Book).
-          \item Mise en pratique avec des excercices basiques, import de données au format JSON, implémentation d'un chat basique (client-serveur).
+          \item Rust Book - \ZeroToProductionRust - \RustForRustaceans
           \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, un RPG multijoueur:
           \begin {myitems}
-          \item La seule ambition est d'apprendre le Rust, tout en prenant plaisir à coder un jeu multijoueur.
-          \item Client graphique basé sur le crate 'piston'.
-          \item Client et serveur communiquent en \MainLinkColor{\href{https://grpc.io/}{gRPC }} avec 'tonic'.
-          \item Serveur et base de données communiquent au moyen d'un ORM, avec 'diesel'.
-          \item Tâches asynchrones pour les requêtes avec 'tokyo'.
-          \item Outil CLI pour gérer les comptes de joueurs avec 'clap'.
-          \item Import des tilemaps en JSON pour pratiquer avec 'serde'.
-          \item Cartes du jeu dessinées en pixel art avec \MainLinkColor{\href{https://www.aseprite.org/}{Aseprite}}.
+          \item gRPC (tonic) - PostgreSQL via ORM (diesel) - Tâches asynchrones (tokyo) - Outil d'administration CLI (clap) - Import d'assets JSON (serde).
+          \item Pixel art (\MainLinkColor{\href{https://www.aseprite.org/}{Aseprite})}.
           \end {myitems}
         }}
     }
@@ -335,19 +323,15 @@ rightmargin=15pt}
       \en{42 School}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020 \\
       \en{
         \enum{
-          \item Learning through project implementation.
-          \item Peer code reviews, and reading documentation.
-          \item Intensive C practice by rewriting well-known programs such as malloc, client-server ftp, basics of Wolfenstein 3D.\\
+          \item Code reviews - Intensive C practice : malloc, \\ nm, otool, trojan, ftp client-server, Wolfenstein 3D.
           \item Nibbler, a snake game with several graphic interfaces by using dynamic graphic library switching at runtime (C++).
-          \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, an animated industrial task editor and viewer. (C\# - Unity).
+          \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, Real-time 3D (C\# - Unity).
         }}
       \fr {
         \enum{
-          \item Apprentissage par la réalisation de projets.
-          \item Revue de code par les pairs et lecture de documentation.
-          \item Pratique intensive du C par la réécriture de programmes bien connu comme malloc, un client-serveur ftp, un Wolfenstein 3D basique.
+          \item Revue de code - Pratique intensive du C : malloc, \\ nm, otool, trojan, client-serveur ftp, Wolfenstein3D.
           \item Nibbler, un jeu snake avec differentes interfaces graphiques. Chargement de bibliothèques dynamiques au runtime (C++).
-          \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, permet de visualiser et créer des tâches industrielles animées. (C\# - Unity).
+          \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, 3D temps réel (C\# - Unity).
         }
       }
     }
@@ -356,32 +340,13 @@ rightmargin=15pt}
       \color{mainFontColor}
       \en{\textbf{Bachelor's Degree in Computer-Aided Design engineering}}
       \fr{\textbf{Licence Professionnelle Ingénierie de la Conception Informatisée}}\\
-      UPJV Saint-Quentin. \en{September}\fr{Septembre} 2012 -- \en{May}\fr{Mai} 2013\\
-      \en{\enum{
-          \item Mastery of CAD tools.
-          \item Mechanical engineering studies and industrial project management.
-        }
-      }
-      \fr{\enum{
-          \item Maîtrise des outils de dessin assisté par ordinateurs (DAO).
-          \item Ingénierie mécanique et gestion de projets industriels.
-        }
-      }
-    }
+      UPJV Saint-Quentin. \en{September}\fr{Septembre} 2012 -- \en{May}\fr{Mai} 2013}
 
     \cvItem{
       \color{mainFontColor}
       \en{\textbf{BTEC Industrial Mecanic and Automation}}
       \fr{\textbf{BTS Mécanique Automatisme Industriel}}\\
-      \en{Condorcet High school}\fr{Lycée Condorcet} Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012\\
-      \en{\enum{
-          \item Design and maintenance of industrial machines and automated systems.
-        }
-      }
-      \fr{\enum{
-          \item Conception et maintenance de systèmes automatisés industriels.
-        }
-      }}
+      \en{Condorcet High school}\fr{Lycée Condorcet} Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012}
   \end{cvEducation}
 
   \begin{cvSkills}
