@@ -9,7 +9,7 @@
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
 % Define which language to use
-\usepackage[en]{optional}
+\usepackage[fr]{optional}
 
 % Languages settings
 \opt{en}{\usepackage[english]{babel}}
@@ -55,7 +55,7 @@ rightmargin=15pt}
 \newcommand{\SideBarLinkColor}[1]{\color{cyan}#1\color{white}}
 \newcommand{\MainLinkColor}[1]{\color{cyan}#1\color{mainFontColor}}
 \newcommand{\DocumentVersionColor}[1]{\color{071952}#1\color{mainFontColor}}
-
+\newcommand{\SideBarVSpace}{\vspace{0.15cm}}
 \newcommand{\cvContactSideBar}{
   \begin{cvContact}
     \cvContactAddress{Valenciennes (59)}
@@ -82,14 +82,16 @@ rightmargin=15pt}
     \en{From working with Grafcet on old programmable logic controllers to studying on the renowed French educational platform OpenClassRooms, and finally joining 42 school.\\My path to becoming a software engineer has been an exciting one, and each new road I take now is even more so. Passionate about programming and eager to learn, over time I have learned that my main strength is my tenacity.}
     \fr{Des Grafcets sur de vieux automates industriels, à OpenClassRoom en passant par l'école 42.\\Le chemin pour devenir développeur fut passionnant et chaque nouvelle route que j'emprunte à présent l'est plus encore. Passionné de programmation et curieux d'apprendre,\\ le temps m'a appris que ma principale force est ma tenacité.}
   \end{cvProfile}
-
+  \SideBarVSpace
   \cvContactSideBar
 
+  \SideBarVSpace
   \begin{cvLanguages}
     \cvLanguage{\en{French (native)}\fr{Français (natif)}}{5}
     \cvLanguage{\en{English}\fr{Anglais}}{3}
   \end{cvLanguages}
 
+  \SideBarVSpace
   \begin{cvInterests}[short]
     \cvInterest{\faMusic}{\en{Guitar}\fr{Guitare}}
     \cvInterest{\faGamepad}{\en{Gaming}\fr{Jeux vidéo}}
@@ -243,6 +245,7 @@ rightmargin=15pt}
 
   \cvContactSideBar
 
+  \SideBarVSpace
   \begin{cvProjects}
     \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures}}}{
       \en{\enum{
