@@ -55,7 +55,10 @@ rightmargin=15pt}
 \newcommand{\SideBarLinkColor}[1]{\color{cyan}#1\color{white}}
 \newcommand{\MainLinkColor}[1]{\color{cyan}#1\color{mainFontColor}}
 \newcommand{\DocumentVersionColor}[1]{\color{071952}#1\color{mainFontColor}}
-\newcommand{\SideBarVSpace}{\vspace{0.15cm}}
+\newcommand{\SideBarVSpace}{\vspace{0.5cm}}
+\newcommand{\DocumentVersionSpaceOne}{\vspace{2cm}}
+\newcommand{\DocumentVersionSpaceTwo}{\vspace{9cm}}
+
 \newcommand{\cvContactSideBar}{
   \begin{cvContact}
     \cvContactAddress{Valenciennes (59)}
@@ -74,12 +77,11 @@ rightmargin=15pt}
 }
 
 \begin{document}
-
 \begin{cvSidebar}
   \cvID{Anthony}{Bara}{assets/aba_360.jpg}{\en{Software Engineer}\fr{Développeur Logiciel}}
 
   \begin{cvProfile}
-    \en{From working with Grafcet on old programmable logic controllers to studying on the renowed French educational platform OpenClassRooms, and finally joining 42 school.\\My path to becoming a software engineer has been an exciting one, and each new road I take now is even more so. Passionate about programming and eager to learn, over time I have learned that my main strength is my tenacity.}
+    \en{From working with Grafcet on old programmable logic controllers to studying on the renowed French educational platform OpenClassRooms, and finally joining 42 school.\\My path to becoming a software engineer has been an exciting one, and each new road I take now is even more so. Passionate about programming and eager to learn, over time I have learned over time that my main strength is my tenacity.}
     \fr{Des Grafcets sur de vieux automates industriels, à OpenClassRoom en passant par l'école 42.\\Le chemin pour devenir développeur fut passionnant et chaque nouvelle route que j'emprunte à présent l'est plus encore. Passionné de programmation et curieux d'apprendre,\\ le temps m'a appris que ma principale force est ma tenacité.}
   \end{cvProfile}
   \SideBarVSpace
@@ -98,7 +100,7 @@ rightmargin=15pt}
     \cvInterest{\faPen}{\en{3D modelling, pixel art}\fr{Modélisation 3D, Pixel art}}
     \cvInterest{\faTree}{\en{Fishing}\fr{Pêche}}
   \end{cvInterests}
-  \vspace{5.5cm}
+  \DocumentVersionSpaceOne
   \DocumentVersion
 \end{cvSidebar}
 
@@ -118,7 +120,7 @@ rightmargin=15pt}
           \begin {myitems}
           \item Rework and improvement of the asynchronous REST API client, with stong configuration constraints.
           \item Improvement of the packet history system
-          \item Rewrite and improvement of the Elasticsearch instance manager (Mappings, Templates, Lifecycles)
+          \item Rewriting and improvement of the Elasticsearch instance manager (Mappings, Templates, Lifecycles)
           \item Added support for OpenIDConnect
           \end {myitems}
           \item \textnormal{\textit{Frontend}}: CSS, JS, Kibana
@@ -140,7 +142,7 @@ rightmargin=15pt}
       }
       \fr{\enum{
           \item Au sein de l'équipe de développement d'un IDS pour les réseaux Telecom, sur le traffic de signalisation.
-          \item Développement, maintenance, résolutions de la dette technique et test sur toutes les couches du logiciel.
+          \item Développement, maintenance, résolution de la dette technique et test sur toutes les couches du logiciel.
           \item \textnormal{\textit{Backend}}: C, Lua, Python, Django, Bash\\
           \begin {myitems}
           \item Réécriture et amélioration d'un client API REST asynchrone, avec de fortes contraintes de configuration.
@@ -156,7 +158,7 @@ rightmargin=15pt}
           \item \textnormal{\textit{Base de données}}: Redis, Elasticsearch
           \begin {myitems}
           \item Outil de migration automatique de la base de données, en production, suite à la mise à jour d'Elasticsearch.\\
-          \item Résolutions des changements de format de données, sans pertes (10 à 40 millions de documents).
+          \item Résolution des changements de format de données, sans pertes (10 à 40 millions de documents).
           \end {myitems}
           \item \textnormal{\textit{Tests d'intégration continue}}: Jenkins, Python, Bash\\
           \begin {myitems}
@@ -274,7 +276,7 @@ rightmargin=15pt}
           \item Statut: Terminé
           \item Initiative: Ecole 42
         }}
-      \vspace{9.5cm}
+      \DocumentVersionSpaceTwo
       \DocumentVersion
     }
   \end{cvProjects}
@@ -286,7 +288,7 @@ rightmargin=15pt}
     \cvItem{
       \color{mainFontColor}
       \en{\textbf{Rust Learning}}
-      \fr{\textbf{Apprentissage du language Rust}}\\
+      \fr{\textbf{Apprentissage du langage Rust}}\\
       \en{Autodidact}\fr{Autodidacte}. \en{Since February}\fr{Depuis Février} 2024\\
       \en {\enum {
           \item Started learning by reading documentation (Rust Book).
@@ -305,7 +307,7 @@ rightmargin=15pt}
         }}
       \fr{\enum{
           \item Début d'apprentissage par lecture de documentation (Rust Book).
-          \item Mise en pratique avec des excercices basique, import de données au format JSON, implementation d'un chat basique (client-serveur).
+          \item Mise en pratique avec des excercices basiques, import de données au format JSON, implémentation d'un chat basique (client-serveur).
           \item Création de \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, un RPG multijoueur:
           \begin {myitems}
           \item La seule ambition est d'apprendre le Rust, tout en prenant plaisir à coder un jeu multijoueur.
