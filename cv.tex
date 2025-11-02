@@ -9,7 +9,7 @@
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
 % Define which language to use
-\usepackage[fr]{optional}
+\usepackage[en]{optional}
 
 % Languages settings
 \opt{en}{\usepackage[english]{babel}}
@@ -135,35 +135,16 @@ rightmargin=15pt}
   \begin{cvExperience}
     \cvItem{
       \color{mainFontColor}
-      \en{\textbf{Software engineer}}
+      \en{\textbf{Software engineer for a Network Intrusion Detection System}}
       \fr{\textbf{Ingénieur logiciel sur un Système de Détection d'Intrusion réseau.}}
       \\
       \textsc{\selectfont P1 Security}, Paris. \en{Since January}\fr{Depuis Janvier} 2020\\
-      \en{\enum{
-          \item As part of the Network Intrusion Detection System (NIDS) development team, focusing on Telecom signaling traffic.
-          \item Development, maintenance, technical debt resolution and testing across all layers of the software.
-          \item \textnormal{\textit{Backend}}: C, Lua, Python, Django, Bash
-          \begin {myitems}
-          \item Rework and improvement of the asynchronous REST API client, with stong configuration constraints.
-          \item Improvement of the packet history system
-          \item Rewriting and improvement of the Elasticsearch instance manager (Mappings, Templates, Lifecycles)
-          \item Added support for OpenIDConnect
-          \end {myitems}
-          \item \textnormal{\textit{Frontend}}: CSS, JS, Kibana
-          \begin {myitems}
-          \item Creation of Kibana visualizations and dashboards.
-          \item Integrations of Kibana views into the software's web interface.
-          \end {myitems}
-          \item \textnormal{\textit{Database}}: Redis, Elasticsearch
-          \begin {myitems}
-          \item Production-ready tool for handling automatic database migration after Elasticsearch upgrade.
-          \item Resolution of data format changes, without loss (10 to 40 million documents).
-          \end {myitems}
-          \item \textnormal{\textit{Continuous Integration}}: Jenkins, Python, bash
-          \begin {myitems}
-          \item Jenkins devops tasks (one master node and five agents).
-          \item VMs maintenance, test pipeline updates, unit tests, functional tests, end-to-end tests.
-          \end {myitems}
+      \en{\enum {
+          \item Development of a network IDS in Telecom environnement.
+          \item Real time traffic processing. (C / Lua)
+          \item Maintenance and technical debt resolution.
+          \item Jenkins devops tasks (one master node and five agents) VMs maintenance - test pipeline updates - unit tests - functional tests - end-to-end tests.
+          \item Traceability tool, proof of concept for customer support. (Rust - actix - sqlx - serde - tokio - askama - Terraform - Docker)
         }
       }
       \fr{\enum{
@@ -235,7 +216,7 @@ rightmargin=15pt}
       \en{Autodidact}\fr{Autodidacte}. \en{Since February}\fr{Depuis Février} 2024\\
       \en {\enum {
           \item Rust Book - \ZeroToProductionRust - \RustForRustaceans
-          \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, a multiplayer RPG project:
+          \item Creation of \MainLinkColor{\href{https://github.com/banthony42/rpg}{Rusted Adventures}}, a multiplayer RPG:
           \begin {myitems}
           \item gRPC (tonic) - PostgreSQL using an ORM (diesel) - Asynchronous tasks (tokyo) - Admin CLI tool (clap) - JSON assets import (serde).
           \item Pixel art using (\MainLinkColor{\href{https://www.aseprite.org/}{Aseprite})}.
@@ -262,14 +243,6 @@ rightmargin=15pt}
         \vspace{-0.8cm}
       \end{flushright}
       \en{42 School}\fr{Ecole 42} Paris. \en{November}\fr{Novembre} 2015 -- \en{January}\fr{Janvier} 2020 \\
-      \en{
-        \enum{
-          \item Code reviews - Intensive C practice : malloc, \\ nm, otool, trojan, ftp client-server, Wolfenstein 3D.
-          \item Nibbler, a snake game with several graphic interfaces by using dynamic graphic library switching at runtime (C++).
-          \item \MainLinkColor{\href{https://github.com/banthony42/xv}{XV}}, Real-time 3D (C\# - Unity).
-        }}
-      \fr {
-      }
     }
 
     \cvItem{
