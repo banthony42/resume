@@ -42,6 +42,12 @@ rightmargin=15pt}
 
 \newcommand{\enum}[1]{\begin{myitems}{#1}\end{myitems}}
 
+\renewcommand{\cvSkill}[1]{#1}
+
+\newcommand{\cvSkillTitle}[1]{\textbullet\hspace{0.5em}\textbf{#1}}
+
+\newcommand{\cvTab}{\hspace{1em}}
+
 % Overwrite default package color
 % Sadly this is the only way to change color
 \definecolor{cvGreen}{HTML}{26334d}         % Sidebar separators
@@ -74,7 +80,7 @@ rightmargin=15pt}
 \newcommand{\DocumentVersion}{
   \begin{center}
     \color{cvGreen}
-    \href{https://github.com/banthony42/resume}{\small{Version 0.0.3 \en{11-02-2025}\fr{02/11/2025}\\{\faExternalLink*} powered by LaTeX}}
+    \href{https://github.com/banthony42/resume}{\small{Version 0.0.4 \en{02-20-2026}\fr{20/02/2026}\\{\faExternalLink*} powered by LaTeX}}
   \end{center}
 }
 
@@ -258,12 +264,14 @@ rightmargin=15pt}
       \en{Condorcet High school}\fr{Lycée Condorcet} Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012}
   \end{cvEducation}
   \begin{cvSkills}
-    \cvSkillOne{4}{C - Lua - Bash - Linux - Redis - Git}
-    \cvSkillOne{4}{Elasticsearch - Kibana}
-    \cvSkillOne{3}{Rust (\en{\textbf{Active learning}}\fr{\textbf{Apprentissage actif}}) - VMWare - ESXi}
-    \cvSkillOne{3}{Python - Django - Docker - VirtualBox - Vagrant - ssh}
-    \cvSkillOne{2}{HTML - CSS - Javascript - Wireshark - Make}
-    \cvSkillOne{1}{PostgreSQL - LaTeX - C\# - C++}
+    \cvSkillOne{\cvSkillTitle{\en{Mastered}\fr{Maîtrisés}}}{}
+    \cvSkillOne{\cvTab C - Lua - Bash - Python (Django) - Linux - Git - ssh}{}
+    \cvSkillOne{\cvSkillTitle{\en{Used}\fr{Utilisés}}}{}
+    \cvSkillOne{\cvTab Rust (tokio - serde - clap - tonic - actix - sqlx - diesel - askama)}{}
+    \cvSkillOne{\cvTab Redis - Elasticsearch - Kibana - PostgreSQL - Wireshark - Make - LaTeX}{}
+    \cvSkillOne{\cvTab VMWare/ESXi - Docker - VirtualBox - Vagrant - Packer - Terraform}{}
+    \cvSkillOne{\cvSkillTitle{\en{Known}\fr{Connus}}}{}
+    \cvSkillOne{\cvTab HTML - CSS - Javascript - C\# - C++}{}
   \end{cvSkills}
 \end{cvMainContent}
 
