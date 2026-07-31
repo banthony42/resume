@@ -46,6 +46,8 @@ rightmargin=15pt}
 
 \newcommand{\cvSkillTitle}[1]{\textbullet\hspace{0.5em}\textbf{#1}}
 
+\fr{\setlength{\cvSkillSep}{2pt}}
+
 \newcommand{\cvTab}{\hspace{1em}}
 
 % Overwrite default package color
@@ -235,14 +237,21 @@ rightmargin=15pt}
       \en{Condorcet High school}\fr{Lycée Condorcet} Saint-Quentin. \en{September}\fr{Septembre} 2010 -- \en{June}\fr{Juin} 2012}
   \end{cvEducation}
   \begin{cvSkills}
-    \cvSkillOne{\cvSkillTitle{\en{Mastered}\fr{Maîtrisés}}}{}
-    \cvSkillOne{\cvTab C - Lua - Bash - Python (Django) - Linux - Git - ssh}{}
-    \cvSkillOne{\cvSkillTitle{\en{Used}\fr{Utilisés}}}{}
-    \cvSkillOne{\cvTab Rust (tokio - serde - clap - tonic - actix - sqlx - diesel - askama)}{}
-    \cvSkillOne{\cvTab Redis - Elasticsearch - Kibana - PostgreSQL - Wireshark - Make - LaTeX}{}
-    \cvSkillOne{\cvTab VMWare/ESXi - Docker - VirtualBox - Vagrant - Packer - Terraform}{}
-    \cvSkillOne{\cvSkillTitle{\en{Known}\fr{Connus}}}{}
-    \cvSkillOne{\cvTab HTML - CSS - Javascript - C\# - C++}{}
+    \cvSkillOne{\cvSkillTitle{Languages}}{}
+    \cvSkillOne{\cvTab Rust - C - Python (Django) - Bash - C++ - C\#}{}
+
+    \cvSkillOne{\cvSkillTitle{Rust Ecosystem}}{}
+    \cvSkillOne{\cvTab Tokio - Actix - SQLx - Diesel - Tonic - Serde - Clap}{}
+
+    \cvSkillOne{\cvSkillTitle{Backend \& Systems}}{}
+    \cvSkillOne{\cvTab Linux - Systemd - Redis - Elasticsearch - Git - SSH}{}
+    \cvSkillOne{\cvTab Async programming - Concurrency - Network programming}{}
+
+    \cvSkillOne{\cvSkillTitle{DevOps}}{}
+    \cvSkillOne{\cvTab Docker - Terraform - Jenkins - Make}{}
+
+    \cvSkillOne{\cvSkillTitle{Web \& Tools}}{}
+    \cvSkillOne{\cvTab Django - JavaScript - HTML/CSS - Wireshark - Kibana}{}
   \end{cvSkills}
 \end{cvMainContent}
 
