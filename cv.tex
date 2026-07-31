@@ -47,6 +47,7 @@ rightmargin=15pt}
 \newcommand{\cvSkillTitle}[1]{\textbullet\hspace{0.5em}\textbf{#1}}
 
 \fr{\setlength{\cvSkillSep}{2pt}}
+\setlength{\cvSectionSBSep}{0.4\cvSectionSBSep}
 
 \newcommand{\cvTab}{\hspace{1em}}
 
@@ -94,40 +95,40 @@ rightmargin=15pt}
     \fr{Fort de 6 ans d'expérience sur un système logiciel utilisé dans des environnements à forte exigence de fiabilité. J'ai développé une solide capacité d'analyse, de diagnostic d'incidents et un goût prononcé pour un code clair, maintenable et des architectures pérennes. Aujourd'hui, je m'oriente vers Rust pour concevoir des systèmes fiables et performants.}
   \end{cvProfile}
   \cvContactSideBar
+  \begin{cvProjects}
+    \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures {\faExternalLink*}}}}{
+      \fr{\enum{
+          \color{white}
+          \item Application client/serveur multijoueur en Rust.
+          \item Backend temps réel • gRPC • Tokio
+          \item PostgreSQL • Diesel • CLI d'administration
+        }}
+      \en{\enum{
+          \color{white}
+          \item Rust multiplayer client/server application.
+          \item Real-time event-driven backend • gRPC • Tokio
+          \item PostgreSQL • Diesel • Admin CLI
+        }}
+    }
+    \cvProject[link=https://github.com/banthony42/vpn-draft]{\SideBarLinkColor{\texttt{VPN Draft {\faExternalLink*}}}}{
+      \en{\enum{
+          \color{white}
+          \item TUN-based network tunnel prototype
+          \item UDP packet forwarding
+          \item Rust • Vagrant • Linux
+        }}
+      \fr{\enum{
+          \color{white}
+          \item Prototype de tunnel réseau via interface TUN
+          \item Transmission de paquets UDP
+          \item Rust • Vagrant • Linux
+        }}
+    }
+  \end{cvProjects}
   \begin{cvLanguages}
     \cvLanguage{\en{French (native)}\fr{Français (natif)}}{5}
     \cvLanguage{\en{English (B2)}\fr{Anglais (B2)}}{4}
   \end{cvLanguages}
-  \begin{cvProjects}
-    \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures}}}{
-      \en{\enum{
-          \color{white}
-          \item Multiplayer RPG in Rust
-          \item Status: In progress
-          \item Initiative: Personal project
-        }}
-      \fr{\enum{
-          \color{white}
-          \item RPG multijoueur en Rust
-          \item Statut: En cours
-          \item Initiative: Projet Personnel
-        }}
-    }
-    \cvProject[link=https://github.com/banthony42/xv]{\SideBarLinkColor{\texttt{XV}}}{
-      \en{\enum{
-          \color{white}
-          \item Animated industrial tasks editor and viewer.
-          \item Status: Finished (2019)
-          \item Initiative: 42 School
-        }}
-      \fr{\enum{
-          \color{white}
-          \item Visualisation et création de tâches industrielles animées.
-          \item Statut: Terminé (2019)
-          \item Initiative: Ecole 42
-        }}
-    }
-  \end{cvProjects}
   \begin{cvInterests}[short]
     \cvInterest{\faMusic}{\en{Guitar}\fr{Guitare}}
     \cvInterest{\faGamepad}{\en{Gaming}\fr{Jeux vidéo}}
