@@ -5,6 +5,17 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 
+% Update the icon of the Skills section
+% replacing the star by tools.
+\usepackage{etoolbox}
+
+\makeatletter
+\pretocmd{\cvSkills}
+  {\let\faStar\faTools}
+  {}{}
+\makeatother
+
+
 % Defaults used in template design.
 \usepackage[margin=\cvMargin,noheadfoot]{geometry}
  
@@ -95,6 +106,10 @@ rightmargin=15pt}
     \fr{Fort de 6 ans d'expérience sur un système logiciel utilisé dans des environnements à forte exigence de fiabilité. J'ai développé une solide capacité d'analyse, de diagnostic d'incidents et un goût prononcé pour un code clair, maintenable et des architectures pérennes. Aujourd'hui, je m'oriente vers Rust pour concevoir des systèmes fiables et performants.}
   \end{cvProfile}
   \cvContactSideBar
+  \begin{cvLanguages}
+    \cvLanguage{\en{French (native)}\fr{Français (natif)}}{5}
+    \cvLanguage{\en{English (B2)}\fr{Anglais (B2)}}{4}
+  \end{cvLanguages}
   \begin{cvProjects}
     \cvProject[link=https://github.com/banthony42/rpg]{\SideBarLinkColor{\texttt{Rusted Adventures {\faExternalLink*}}}}{
       \fr{\enum{
@@ -102,38 +117,35 @@ rightmargin=15pt}
           \item Application client/serveur multijoueur en Rust.
           \item Backend temps réel • gRPC • Tokio
           \item PostgreSQL • Diesel • CLI d'administration
+          \item GitHub Actions: Tests automatisée
         }}
       \en{\enum{
           \color{white}
           \item Rust multiplayer client/server application.
           \item Real-time event-driven backend • gRPC • Tokio
           \item PostgreSQL • Diesel • Admin CLI
+          \item GitHub Actions: Automated tests
         }}
     }
     \cvProject[link=https://github.com/banthony42/vpn-draft]{\SideBarLinkColor{\texttt{VPN Draft {\faExternalLink*}}}}{
       \en{\enum{
           \color{white}
-          \item TUN-based network tunnel prototype
+          \item TUN-based network tunnel experimentation
           \item UDP packet forwarding
           \item Rust • Vagrant • Linux
         }}
       \fr{\enum{
           \color{white}
-          \item Prototype de tunnel réseau via interface TUN
+          \item Experimentation de tunnel réseau via interface TUN
           \item Transmission de paquets UDP
           \item Rust • Vagrant • Linux
         }}
     }
   \end{cvProjects}
-  \begin{cvLanguages}
-    \cvLanguage{\en{French (native)}\fr{Français (natif)}}{5}
-    \cvLanguage{\en{English (B2)}\fr{Anglais (B2)}}{4}
-  \end{cvLanguages}
   \begin{cvInterests}[short]
-    \cvInterest{\faMusic}{\en{Guitar}\fr{Guitare}}
-    \cvInterest{\faGamepad}{\en{Gaming}\fr{Jeux vidéo}}
-    \cvInterest{\faPen}{\en{3D modeling, pixel art}\fr{Modélisation 3D, Pixel art}}
-    \cvInterest{\faTree}{\en{Fishing}\fr{Pêche}}
+    \cvInterest{\faMusic}{\en{Guitar, Drums}\fr{Guitare, Batterie}}
+    \cvInterest{\faPen}{\en{3D modeling, pixel art}\fr{Modélisation, Pixel art}}
+    \cvInterest{\faTree}{\en{Fishing, Gardening}\fr{Pêche, Jardinage}}
   \end{cvInterests}
   \vspace{0.2cm}
   \DocumentVersion
@@ -162,7 +174,7 @@ rightmargin=15pt}
       \fr{\enum{
           \item Prototype Rust d'une plateforme de gestion des instances de production: cycle de vie, et provisionnement automatisé iso-prod.
           \item Migration expérimentale d'une API REST pour l'analyse d'URLs: Python/Flask vers Rust/Actix.
-          \item Développement de composants C pour le traitement de flux réseau temps réel.
+          \item Développement C de composants pour le traitement de flux réseau temps réel.
           \item Développement d'outils internes et de l'interface web du produit: Python, Django, Bash
           \item Évolution d'un système backend complexe multi-services sous Linux, avec un focus sur la fiabilité et la maintenabilité.
           \item Analyse, diagnostic et résolution d'incidents complexes sur des systèmes Linux en production.
@@ -178,11 +190,11 @@ rightmargin=15pt}
       \textsc{\selectfont Blue Frog Robotics}, Paris. \en{September}\fr{Septembre} 2018 -- \en{October}\fr{Octobre} 2019\\
       \en{\enum{
           \item Development of the SDK and applications built on top of it (C\#, Unity).
-          \item Regression testing, code reviews, and collaboration in an agile environment.
+          \item Regression testing, code reviews, and collaboration in an SCRUM environment.
         }}
       \fr{\enum{
           \item Développement du SDK et d'applications basées sur celui-ci (C\#, Unity).
-          \item Tests de non-régression, revues de code et collaboration en environnement agile.
+          \item Tests de non-régression, revues de code et collaboration en environnement SCRUM.
         }}
     }
     \cvItem{
@@ -239,47 +251,20 @@ rightmargin=15pt}
   \end{cvEducation}
   \begin{cvSkills}
     \cvSkillOne{\cvSkillTitle{Languages}}{}
-    \cvSkillOne{\cvTab Rust - C - Python (Django) - Bash - C++ - C\#}{}
+    \cvSkillOne{\cvTab Rust - C - Python (Django) - Lua - Bash - C++ - C\#}{}
 
     \cvSkillOne{\cvSkillTitle{Rust Ecosystem}}{}
     \cvSkillOne{\cvTab Tokio - Actix - SQLx - Diesel - Tonic - Serde - Clap}{}
 
     \cvSkillOne{\cvSkillTitle{Backend \& Systems}}{}
-    \cvSkillOne{\cvTab Linux - Systemd - Redis - Elasticsearch - Git - SSH}{}
+    \cvSkillOne{\cvTab Linux - Systemd - Redis - Elasticsearch - PostgreSQL - Git - SSH}{}
     \cvSkillOne{\cvTab Async programming - Concurrency - Network programming}{}
 
     \cvSkillOne{\cvSkillTitle{DevOps}}{}
-    \cvSkillOne{\cvTab Docker - Terraform - Jenkins - Make}{}
+    \cvSkillOne{\cvTab Docker - Terraform - Jenkins - Make - VMWare ESXi - VirtualBox - Vagrant}{}
 
-    \cvSkillOne{\cvSkillTitle{Web \& Tools}}{}
-    \cvSkillOne{\cvTab Django - JavaScript - HTML/CSS - Wireshark - Kibana}{}
+    \cvSkillOne{\cvSkillTitle{Web - Tools - Doc}}{}
+    \cvSkillOne{\cvTab Django - JavaScript - HTML/CSS - Wireshark - Kibana - LaTeX}{}
   \end{cvSkills}
 \end{cvMainContent}
-
-
-% \clearpage
-
-% \begin{cvCoverLetter}
-
-%   \cvBeneficiary{%
-%     name=Jane Smith,
-%     position=Position,
-%     company=Company,
-%     address line 1=Address line 1,
-%     address line 2=Address line 2}
-
-%   Dear Miss.\ Smith
-
-%   \vspace{\baselineskip}
-
-%   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
-%   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
-%   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum cursus sapien, id eleifend mi pellentesque id. Etiam lobortis eu odio a sodales. Phasellus ut dolor feugiat, lacinia lectus in, blandit metus.  Fusce lacinia dolor et metus gravida pulvinar sit amet et ex. Suspendisse vestibulum, leo malesuada molestie maximus, sem risus ornare elit, vitae sodales felis elit in ipsum.
-
-%   \vspace{\cvMargin}
-
-%   \cvFullName
-
-% \end{cvCoverLetter}
-
 \end{document}
